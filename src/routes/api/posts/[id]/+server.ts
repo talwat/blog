@@ -10,7 +10,7 @@ export const GET: RequestHandler = async ({ params }) => {
     code: string;
   }
 
-  const path: string = `posts/${params.id}.md`;
+  const path: string = `posts/${params.id}.md`; // eslint-disable-line @typescript-eslint/restrict-template-expressions
 
   let raw: string;
 
