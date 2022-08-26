@@ -17,7 +17,6 @@ export const GET: RequestHandler = async ({ params }) => {
   try {
     raw = await fs.readFile(path, "utf-8");
   } catch (err) {
-    console.log(err);
     if ( // Check for known 404 error
       (err as FSError).code !== undefined &&
       (err as FSError).code === "ENOENT"
