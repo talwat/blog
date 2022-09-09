@@ -1,6 +1,6 @@
 import { json, type RequestHandler } from "@sveltejs/kit";
 
-import type { PostAttributes } from "src/posts"
+import type { PostAttributes } from "src/posts";
 
 import fs from "fs/promises";
 import fm from "front-matter";

@@ -3,3 +3,14 @@
 * {
   font-family: "Roboto", sans-serif !important;
 }
+
+.heading-anchor-image {
+  height: 2em;
+}
+
+.heading-anchor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+}
