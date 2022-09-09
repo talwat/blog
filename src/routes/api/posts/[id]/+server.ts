@@ -41,8 +41,8 @@ export const GET: RequestHandler = async ({ params }) => {
       if (!ids) return false;
 
       const sections = level === 1 ? "" : "</section><section>"; // Close previous section and open a new one
-      const headingAnchorImage = `<img class="heading-anchor-image" src="/blog/svg/link.svg">`
-      const headingAnchorText = `<h${level} id="${ids[1]}">${textWithoutID}</h${level}>`
+      const headingAnchorImage = `<img class="heading-anchor-image" src="/blog/svg/link.svg">`;
+      const headingAnchorText = `<h${level} id="${ids[1]}">${textWithoutID}</h${level}>`;
       const anchor = `<a class="heading-anchor" href="/blog/posts/${params.id}#${ids[1]}">${headingAnchorImage}${headingAnchorText}</a>`;
 
       return `${sections} ${anchor}`;

@@ -23,7 +23,7 @@ jobs:
           checkName: CodeQL
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
-      - name: 'Merge PR'
+      - name: "Merge PR"
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
