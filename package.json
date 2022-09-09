@@ -16,7 +16,7 @@
     "@sveltejs/kit": "next",
     "@types/glob": "^7.2.0",
     "@types/marked": "^4.0.7",
-    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/eslint-plugin": "^5.36.2",
     "@typescript-eslint/parser": "^5.27.0",
     "eslint": "^8.23.0",
     "eslint-config-prettier": "^8.3.0",
