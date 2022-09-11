@@ -4,9 +4,30 @@
   export let data: PageData;
 </script>
 
-<h1>Talwat's Blog</h1>
+<main>
+  <h1 class="main-heading">Talwat's Blog</h1>
 
-{#each data.posts as post}
-  <a href="/blog/posts/{post.id}">{post.name}</a> - {post.date}
-  <br />
-{/each}
+  <div class="posts">
+    {#each data.posts.sort((a, b) => (a.date < b.date ? 1 : -1)) as post}
+      <div class="post">
+        <a href="/blog/posts/{post.id}">{post.title}</a> - {post.date}
+      </div>
+    {/each}
+  </div>
+</main>
+
+<style>
+  main {
+    padding: 12px;
+  }
+
+  .main-heading {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+
+  .posts {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

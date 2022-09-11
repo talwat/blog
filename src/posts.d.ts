@@ -1,5 +1,5 @@
 export interface PostAttributes {
-  name: string;
+  title: string;
   id: string;
   date: string;
   desc: string;

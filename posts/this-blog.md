@@ -1,19 +1,20 @@
 ---
-name: "This blog"
-id: "this-blog"
-date: "2022/08/26"
+title: "This blog"
+date: "9/11/2022"
 desc: "A test page"
 ---
-
-# This blog {#this-blog}
-
-So, this is my new blog.
 
 ## Other {#other}
 
 ```txt
 code
 ```
+
+And also do `this`
+
+### Anyway {#anyway}
+
+Woop
 
 ## Why {#why}
 

@@ -1,26 +1,36 @@
 <script lang="ts">
   import type { PageData } from "./$types";
+  import "/src/post.css";
 
   export let data: PageData;
 </script>
 
-<main>
+<main class="post-content">
+  <div class="heading-info">
+    <h1 class="title">{data.attributes.title}</h1>
+    <h2 class="metadata">
+      {new Date(data.attributes.date).toLocaleDateString("en", {
+        day: "numeric",
+        month: "long",
+        year: "numeric",
+      })} - {data.attributes.desc}
+    </h2>
+  </div>
   {@html data.content}
 </main>
 
 <style>
-  main :global(h1),
-  main :global(h2),
-  main :global(h3),
-  main :global(h4),
-  main :global(h5),
-  main :global(h6) {
-    margin-bottom: 0.25em;
-    margin-top: 0.25em;
+  .metadata {
+    color: #ccc;
+    font-size: 18px;
   }
 
-  main :global(p) {
-    margin-bottom: 0.25em;
-    margin-top: 0.25em;
+  .heading-info {
+    padding-bottom: 12px;
+    border-bottom: 1px solid;
+  }
+
+  main {
+    padding: 12px;
   }
 </style>

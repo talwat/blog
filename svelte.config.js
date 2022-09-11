@@ -14,9 +14,6 @@ const config = {
       pages: "dist",
       assets: "dist",
     }),
-    prerender: {
-      default: true,
-    },
     paths: {
       base: "/blog",
     },

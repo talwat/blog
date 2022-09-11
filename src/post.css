@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro);
+
+.post-content h1 {
+  font-size: 48px;
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+}
+
+.post-content h2,
+.post-content h3,
+.post-content h4,
+.post-content h5,
+.post-content h6 {
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+}
+
+.post-content a {
+  text-decoration: none;
+}
+
+.post-content p,
+.post-content pre {
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+}
+.post-content pre {
+  background-color: #666;
+  width: fit-content;
+  padding: 6px;
+  border-radius: 6px;
+}
+
+.post-content code {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+.post-content p > code {
+  background-color: #666;
+  width: fit-content;
+  padding: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 6px;
+}
+
+.post-content .heading-anchor-image {
+  height: 28px;
+}
+
+.post-content .heading-anchor-image-3 {
+  height: 20px;
+}
+
+.post-content .heading-anchor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  height: fit-content;
+  margin-top: 1em;
+}

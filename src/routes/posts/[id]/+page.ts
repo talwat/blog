@@ -1,4 +1,4 @@
-import { browser, dev } from "$app/env";
+import { browser, dev } from "$app/environment";
 import type { PageLoad } from "./$types";
 import { error } from "@sveltejs/kit";
 import type { Post } from "src/posts";
@@ -15,5 +15,4 @@ export const load: PageLoad = async ({ params, fetch }) => {
   return json;
 };
 
-export const hydrate = dev;
-export const router = browser;
+export const csr = true;

@@ -1,4 +1,3 @@
-import { browser, dev } from "$app/env";
 import type { PostAttributes } from "src/posts";
 import type { PageLoad } from "./$types";
 
@@ -11,5 +10,4 @@ export const load: PageLoad = async ({ fetch }) => {
   };
 };
 
-export const router = browser;
-export const hydrate = dev;
+export const csr = true;
