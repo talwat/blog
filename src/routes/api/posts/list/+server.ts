@@ -13,7 +13,7 @@ export const GET: RequestHandler = async () => {
 
   for (const file of files) {
     const raw: string = await fs.readFile(`posts/${file}`, "utf-8");
-    let attributes: PostAttributes = fm(raw).attributes as PostAttributes;
+    const attributes: PostAttributes = fm(raw).attributes as PostAttributes;
     attributes.id = path.parse(file).name;
     posts.push(attributes);
   }
