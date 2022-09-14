@@ -78,3 +78,12 @@ _italic_
 3. Blue `Blue` **Blue**
 
 [Link](https://google.com)
+
+| Red  | Green |
+| ---- | ----- |
+| Blue | Blue  |
+| Blue | Blue  |
+| Blue | Blue  |
+| Blue | Blue  |
+| Blue | Blue  |
+| Blue | Blue  |

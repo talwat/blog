@@ -47,6 +47,7 @@
     box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
+    z-index: 1;
   }
 
   .content {
