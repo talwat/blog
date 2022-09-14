@@ -8,7 +8,7 @@
   <h1 class="main-heading">Talwat's Blog</h1>
 
   <div class="posts">
-    {#each data.posts.sort((a, b) => (a.date < b.date ? 1 : -1)) as post}
+    {#each data.posts.sort((a, b) => (new Date(a.date) < new Date(b.date) ? 1 : -1)) as post}
       <div class="post">
         <a href="/blog/posts/{post.id}" class="post-link">{post.title}</a> - {post.date}
       </div>
