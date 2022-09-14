@@ -1,0 +1,77 @@
+.doc-content a:hover {
+  color: hsl(220, 90%, 60%);
+  text-decoration: underline;
+}
+
+.doc-content a {
+  color: hsl(220, 90%, 60%);
+  text-decoration: none;
+}
+
+.doc-content blockquote {
+  padding: 0.8em 0.8em 0.8em 1em;
+  margin: 1em 1em 1em 1em;
+  position: relative;
+}
+
+.doc-content blockquote:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 0.3em;
+  background-color: #333;
+  border-radius: 10px;
+}
+
+.doc-content p,
+.doc-content pre {
+  margin-bottom: 0.25em;
+  margin-top: 0.25em;
+}
+.doc-content pre {
+  background-color: #282c34;
+  max-width: 30em;
+  width: auto;
+  padding: 0.5em;
+  border-radius: 0.5em;
+}
+
+.doc-content code {
+  font-family: "Source Sans Pro", monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.doc-content :not(pre) > code {
+  background-color: #282c34;
+  width: fit-content;
+  padding: 4px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  border-radius: 0.5em;
+}
+
+.doc-content .heading-anchor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5em;
+  height: fit-content;
+  width: fit-content;
+  text-decoration: none;
+  margin-bottom: 0.25em;
+  margin-top: 1.3em;
+}
+
+.doc-content .heading-anchor-txt {
+  scroll-margin-top: 7rem;
+  color: white;
+  margin: 0;
+}
+
+.doc-content .heading-anchor-txt:hover {
+  text-decoration: underline;
+}
