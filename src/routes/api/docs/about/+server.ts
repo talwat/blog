@@ -7,5 +7,5 @@ export const GET: RequestHandler = async ({ params }) => {
 
   const raw: string = await fs.readFile(path, "utf-8");
 
-  return json(renderMd(params.id as string, raw));
+  return json(renderMd("about", raw));
 };
