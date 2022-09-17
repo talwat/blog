@@ -12,11 +12,11 @@ export const GET: RequestHandler = async () => {
     xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
   });
 
-  function addLoc(url: string, priority: number): void {
+  function addLoc(loc: string, priority: number): void {
     xml
       .ele("url")
       .ele("loc")
-      .txt(url)
+      .txt(`https://talwat.github.io/blog/${loc}`)
       .up()
       .ele("priority")
       .txt(priority.toString());
