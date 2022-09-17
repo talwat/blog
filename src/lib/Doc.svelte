@@ -30,14 +30,14 @@
   }
 
   .title {
-    color: white;
+    color: var(--fg);
     font-size: 3em;
     margin-bottom: 0;
     margin-top: 0.25em;
   }
 
   .metadata {
-    color: #ccc;
+    color: var(--fg-secondary);
     margin: 0.3em 0 0.3em 0;
     font-size: 1.1em;
   }

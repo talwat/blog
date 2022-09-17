@@ -3,7 +3,7 @@
 }
 
 .doc-content a {
-  color: hsl(200, 90%, 60%);
+  color: var(--link);
   text-decoration: none;
 }
 
@@ -21,7 +21,7 @@
   bottom: 0;
   left: 0;
   width: 0.3em;
-  background-color: #333;
+  background-color: var(--bg-1);
   border-radius: 10px;
 }
 
@@ -31,7 +31,7 @@
   margin-top: 0.25em;
 }
 .doc-content pre {
-  background-color: #282c34;
+  background-color: var(--code-bg);
   max-width: 30em;
   width: auto;
   padding: 0.5em;
@@ -45,7 +45,7 @@
 }
 
 .doc-content :not(pre) > code {
-  background-color: #282c34;
+  background-color: var(--code-bg);
   width: fit-content;
   padding: 4px;
   padding-top: 2px;
@@ -67,7 +67,7 @@
 
 .doc-content .heading-anchor-txt {
   scroll-margin-top: 7rem;
-  color: white;
+  color: var(--fg);
   margin: 0;
 }
 
@@ -80,7 +80,7 @@ th,
 td {
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #666;
+  border: 1px solid var(--bg-4);
 }
 
 .doc-content td,
@@ -92,7 +92,7 @@ th {
 }
 
 .doc-content tr:nth-child(odd) td {
-  background-color: #555;
+  background-color: var(--bg-3);
 }
 
 .doc-content table {

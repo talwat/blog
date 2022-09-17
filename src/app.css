@@ -1,8 +1,21 @@
+:root {
+  --bg-0: #222;
+  --bg-1: #333;
+  --bg-2: #444;
+  --bg-3: #555;
+  --bg-4: #666;
+  --bg-5: #777;
+  --fg: white;
+  --fg-secondary: #ccc;
+  --code-bg: #282c34;
+  --link: hsl(200, 90%, 60%);
+}
+
 html,
 body {
-  background-color: #444;
+  background-color: var(--bg-2);
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-  color: white;
+  color: var(--fg);
 }
