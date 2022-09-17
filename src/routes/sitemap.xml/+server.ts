@@ -40,6 +40,7 @@ export const GET: RequestHandler = async () => {
   }
 
   addLoc("about", 0.8);
+  addLoc("", 1.0);
 
   return new Response(xml.end({ prettyPrint: true }));
 };
