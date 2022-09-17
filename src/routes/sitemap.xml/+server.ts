@@ -36,10 +36,10 @@ export const GET: RequestHandler = async () => {
   }
 
   for (const post of posts) {
-    addPostLoc(`posts/${post.id}`, 0.8, new Date(post.date));
+    addPostLoc(`blog/posts/${post.id}`, 0.8, new Date(post.date));
   }
 
-  addLoc("about", 0.8);
+  addLoc("blog/about", 0.8);
 
   return new Response(xml.end({ prettyPrint: true }));
 };
