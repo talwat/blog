@@ -1,7 +1,7 @@
 import { json, error, type RequestHandler } from "@sveltejs/kit";
 
 import fs from "fs/promises";
-import { renderMd } from "../../../../utils";
+import { renderMd } from "$lib/utils";
 
 export const GET: RequestHandler = async ({ params }) => {
   /** Error thrown by fs.readFile **/

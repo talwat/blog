@@ -9,5 +9,3 @@ export const load: PageLoad = async ({ fetch }) => {
     posts: json,
   };
 };
-
-export const csr = true;

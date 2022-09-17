@@ -13,5 +13,3 @@ export const load: PageLoad = async ({ fetch }) => {
 
   return json;
 };
-
-export const csr = true;
