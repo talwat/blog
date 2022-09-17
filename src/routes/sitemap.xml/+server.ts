@@ -22,11 +22,11 @@ export const GET: RequestHandler = async () => {
       .txt(priority.toString());
   }
 
-  function addPostLoc(url: string, priority: number, date: Date): void {
+  function addPostLoc(loc: string, priority: number, date: Date): void {
     xml
       .ele("url")
       .ele("loc")
-      .txt(url)
+      .txt(`https://talwat.github.io/blog/${loc}`)
       .up()
       .ele("priority")
       .txt(priority.toString())
@@ -36,10 +36,10 @@ export const GET: RequestHandler = async () => {
   }
 
   for (const post of posts) {
-    addPostLoc(`blog/posts/${post.id}`, 0.8, new Date(post.date));
+    addPostLoc(`posts/${post.id}`, 0.8, new Date(post.date));
   }
 
-  addLoc("blog/about", 0.8);
+  addLoc("about", 0.8);
 
   return new Response(xml.end({ prettyPrint: true }));
 };
