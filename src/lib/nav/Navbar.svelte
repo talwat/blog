@@ -15,7 +15,6 @@
   import Seperator from "./Seperator.svelte";
 
   let showMenu = false;
-  let width: number;
 
   const items: NavItems = [
     { href: "/blog/about", text: "About" },
@@ -24,8 +23,6 @@
   ];
 </script>
 
-<svelte:window bind:innerWidth={width} />
-
 <nav class="top-bar">
   <div class="nav-items">
     <div class="left">
@@ -33,31 +30,31 @@
         <img src="/blog/img/pfp.png" alt="Home" />
       </a>
     </div>
-    <div class="right">
-      {#if width !== undefined}
-        <!-- To make sure the wrong nav items don't display -->
-        {#if width > 600}
-          {#each items as item}
-            {#if item === "bullet"}
-              <Seperator />
-            {:else if item !== "line"}
-              <!-- Line does nothing in normal (600+ px in viewport) view -->
-              <a class="nav-link" href={item.href}>{item.text}</a>
-            {/if}
-          {/each}
-        {:else}
-          <Hamburger bind:show={showMenu} />
+    <div class="right normal-vw">
+      {#each items as item}
+        {#if item === "bullet"}
+          <Seperator />
+        {:else if item !== "line"}
+          <!-- Line does nothing in normal (600+ px in viewport) view -->
+          <a class="nav-link" href={item.href}>{item.text}</a>
         {/if}
-      {/if}
+      {/each}
+    </div>
+    <div class="small-vw right">
+      <Hamburger bind:show={showMenu} />
     </div>
   </div>
 
-  {#if showMenu && width < 600}
+  {#if showMenu}
     <HamburgerMenu {items} />
   {/if}
 </nav>
 
 <style>
+  .small-vw {
+    display: none !important;
+  }
+
   .top-bar {
     background-color: var(--bg-1);
     position: fixed;
@@ -85,6 +82,22 @@
     max-height: 3em;
   }
 
+  .left,
+  .right {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    gap: 0.6em;
+  }
+
+  .left {
+    justify-content: flex-start;
+  }
+
+  .right {
+    justify-content: flex-end;
+  }
+
   @media only screen and (max-width: 600px) {
     .nav-items {
       padding-left: 1.5em;
@@ -101,21 +114,13 @@
       max-height: 2.5em;
       max-width: 2.5em;
     }
-  }
 
-  .left,
-  .right {
-    width: 50%;
-    display: flex;
-    align-items: center;
-    gap: 0.6em;
-  }
+    .small-vw {
+      display: flex !important;
+    }
 
-  .left {
-    justify-content: flex-start;
-  }
-
-  .right {
-    justify-content: flex-end;
+    .normal-vw {
+      display: none !important;
+    }
   }
 </style>
