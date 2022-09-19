@@ -9,7 +9,17 @@ export const GET: RequestHandler = async ({ params }) => {
     code: string;
   }
 
-  const path: string = `docs/posts/${params.id}.md`; // eslint-disable-line @typescript-eslint/restrict-template-expressions
+  /*
+    params.id will never be undefined unless something went very wrong in sveltekit.
+  */
+
+  if (params.id === undefined)
+    throw error(
+      500,
+      "ID parameter in URL is undefined, if you see this, sveltekit probably has a bug."
+    );
+
+  const path: string = `docs/posts/${params.id ? params.id : "undefined"}.md`;
 
   let raw: string;
 

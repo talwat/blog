@@ -14,7 +14,7 @@
   <div class="posts">
     {#each data.posts.sort( (a, b) => (new Date(a.date) < new Date(b.date) ? 1 : -1) ) as post}
       <div class="post">
-        <a href="/blog/posts/{post.id}" class="post-link">{post.title}</a> - {post.date}
+        <a href="/blog/posts/{post.id}">{post.title}</a> - {post.date}
       </div>
     {/each}
   </div>
@@ -23,10 +23,6 @@
 <style>
   main {
     padding: 12px;
-  }
-
-  .post-link {
-    color: var(--fg);
   }
 
   .main-heading {

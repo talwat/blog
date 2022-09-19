@@ -1,7 +1,30 @@
+<script lang="ts" context="module">
+  export interface Link {
+    href: string;
+    text: string;
+  }
+
+  export type NavItems = (Link | "bullet" | "line")[];
+</script>
+
 <script lang="ts">
   import "/src/app.css";
+  import Hamburger from "./hamburger/Hamburger.svelte";
+
+  import HamburgerMenu from "./hamburger/HamburgerMenu.svelte";
   import Seperator from "./Seperator.svelte";
+
+  let showMenu = false;
+  let width: number;
+
+  const items: NavItems = [
+    { href: "/blog/about", text: "About" },
+    "bullet",
+    { href: "https://github.com/talwat", text: "Github" },
+  ];
 </script>
+
+<svelte:window bind:innerWidth={width} />
 
 <nav class="top-bar">
   <div class="nav-items">
@@ -11,69 +34,88 @@
       </a>
     </div>
     <div class="right">
-      <a href="/blog/about">About me</a>
-      <Seperator />
-      <a href="https://github.com/talwat">Github</a>
+      {#if width !== undefined}
+        <!-- To make sure the wrong nav items don't display -->
+        {#if width > 600}
+          {#each items as item}
+            {#if item === "bullet"}
+              <Seperator />
+            {:else if item !== "line"}
+              <!-- Line does nothing in normal (600+ px in viewport) view -->
+              <a class="nav-link" href={item.href}>{item.text}</a>
+            {/if}
+          {/each}
+        {:else}
+          <Hamburger bind:show={showMenu} />
+        {/if}
+      {/if}
     </div>
   </div>
+
+  {#if showMenu && width < 600}
+    <HamburgerMenu {items} />
+  {/if}
 </nav>
 
 <style>
   .top-bar {
-    background-color: rgb(51, 51, 51, 0.5);
+    background-color: var(--bg-1);
     position: fixed;
     top: 0;
     width: 100vw;
     margin: 0;
     padding: 0;
-    height: 5em;
-    box-shadow: 0 2px 4px 1px rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    z-index: 1;
+    box-shadow: 0 4px 4px 0 rgb(0, 0, 0, 20%);
+    z-index: 2;
   }
 
   .nav-items {
     display: flex;
     justify-content: space-between;
     align-items: stretch;
-    height: 100%;
-    width: 100%;
+    width: auto;
+    padding-left: 3em;
+    padding-right: 3em;
+    transition: 0.2s;
+    height: 5em;
+  }
+
+  .left *,
+  .right * {
+    max-height: 3em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .nav-items {
+      padding-left: 1.5em;
+      padding-right: 1.5em;
+    }
+
+    .left *,
+    .right * {
+      max-height: 2.5em;
+    }
+
+    .left :global(.icon),
+    .right :global(.icon) {
+      max-height: 2.5em;
+      max-width: 2.5em;
+    }
   }
 
   .left,
   .right {
     width: 50%;
-
     display: flex;
     align-items: center;
     gap: 0.6em;
   }
 
-  .left *,
-  .right * {
-    max-height: 4em;
-  }
-
-  .left a,
-  .right a {
-    color: var(--fg);
-    text-decoration: none;
-  }
-
-  .left a:hover,
-  .right a:hover {
-    color: var(--link);
-    text-decoration: underline;
-  }
-
   .left {
-    padding-left: 3em;
     justify-content: flex-start;
   }
 
   .right {
-    padding-right: 3em;
     justify-content: flex-end;
   }
 </style>

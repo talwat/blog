@@ -1,12 +1,3 @@
-.doc-content a:hover {
-  text-decoration: underline;
-}
-
-.doc-content a {
-  color: var(--link);
-  text-decoration: none;
-}
-
 .doc-content blockquote {
   padding: 0.8em 0.8em 0.8em 1em;
   margin: 1em 1em 1em 1em;
