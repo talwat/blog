@@ -1,89 +1,52 @@
 ---
 title: "This blog"
 date: "9/11/2022"
-desc: "A test page"
+desc: "How I made this blog."
+longDesc: "I made this blog using svelte, an open source javascript framework for building web applications. I also utilized sveltekit to complete the website, which is a framework which goes nicely with svelte built on top of vite."
+tags:
+    - svelte
+    - sveltekit
+    - vite
+    - js
+    - blog
+    - site
 ---
 
-## Other
+## Why make a blog?
 
-```txt
-code
-```
+I made this blog to try and share my experiences, as well as learn a few things about sveltekit. This is my first true project using the framework.
 
-And also `like this`
+This blog won't be super professional, as it is only a learning experience, but I will try to put useful information on here.
 
-### Smaller Heading
+## The technology I used
 
-Hello world!
+I used [svelte](https://svelte.dev/) and [sveltekit](https://kit.svelte.dev/) _(which itself is powered by [vite](https://vitejs.dev/))_. These are two amazingly useful frameworks. Svelte is mainly for the UI itself, while Sveltekit manages things like routing and SSR (server side rendering).
 
-#### Even smaller heading
+For hosting, I am using [github pages](https://pages.github.com/), which allows me to host this blog for free. The [source code](https://github.com/talwat/blog) for this blog is on github, too!
 
-Hello world!
+I'm also using various technologies like Typescript to make the whole process easier.
 
-## Code
+A list of additional libraries I am using are:
 
-```py
-class Some:
-    def Python:
-        print("code")
-```
+-   [Marked.js](https://marked.js.org/) - A super useful library for rendering [markdown](https://en.wikipedia.org/wiki/Markdown), as all of the posts on this site [including this one](https://github.com/talwat/blog/blob/main/docs/posts/this-blog.md) are written in [markdown](https://en.wikipedia.org/wiki/Markdown).
+-   [xmlbuilder2](https://oozcitak.github.io/xmlbuilder2/) - This library is mainly used for creating this site's [sitemap](https://www.sitemaps.org/).
+-   [front-matter](https://github.com/jxson/front-matter) - I use this to extract meta data (front-matter) from posts.
+-   [highlight.js](https://highlightjs.org/) - This library is for syntax highlighting, and it allows me to syntax highlight code blocks.
 
-```html
-<script>
-    function hello(param) {
-        something(1 + 2).value;
-        return thing;
-    }
-</script>
-<body>
-    <div class="class">
-        <p>Hello</p>
-    </div>
-</body>
+## How it works
 
-<style>
-    .class {
-        color: red;
-    }
-</style>
-```
+Essentially, this blog has an API which allows each web page to get data about each post. Its content, the description, etc... And then uses that data to display the post. The [about](/blog/about) page is handled very similarly.
 
-```txt
-VeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVeryVery Long piece of text
-```
+This method is the cleanest I have found so far, so I will continue using it.
 
-## Text
+Feel free to look at all the code yourself [here](https://github.com/talwat/blog).
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean et lacus laoreet, bibendum est id, venenatis augue. Ut imperdiet dolor eget tellus gravida, sit amet lobortis lorem efficitur. Aliquam in ultrices mi. Praesent quis dolor at nisi placerat tincidunt. Pellentesque ultricies tincidunt ipsum ut molestie. Mauris nec laoreet tortor. Duis viverra, metus id tempus mattis, risus libero convallis sem, vitae laoreet nisl ante in nisl. Donec faucibus ex diam, eu semper libero consequat aliquam.
+## Why not use something such as Wordpress?
 
-## Bold and others
+I decided not to use wordpress because I wanted this blog to be not only for learning sveltekit but also other things such as submitting a site to google.
 
-> Quote
->
-> Next line
->
-> > Nested Quote
->
-> Quote
+Its much more satisfying and rewarding to make this blog manually.
 
-**bold**
-_italic_
+## Conclusion
 
--   Red `Red` **Red**
--   Green `Green` **Green**
--   Blue `Blue` **Blue**
-
-1. Red `Red` **Red**
-2. Green `Green` **Green**
-3. Blue `Blue` **Blue**
-
-[Link](https://google.com)
-
-| Red  | Green |
-| ---- | ----- |
-| Blue | Blue  |
-| Blue | Blue  |
-| Blue | Blue  |
-| Blue | Blue  |
-| Blue | Blue  |
-| Blue | Blue  |
+While this is my first actual post here, I hope to make more and improve the website even further. Thank you for reading.

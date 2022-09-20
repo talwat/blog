@@ -2,6 +2,18 @@
   import { page } from "$app/stores";
 </script>
 
+<svelte:head>
+  <title>Talwat's Blog - {$page.status}</title>
+  <meta name="description" content="{$page.status} error." />
+
+  <meta name="twitter:title" content="Talwat's Blog - {$page.status}" />
+  <meta name="twitter:description" content="{$page.status} error." />
+
+  <meta name="og:title" content="Talwat's Blog - {$page.status}" />
+  <meta name="og:url" content={$page.url.toString()} />
+  <meta name="og:description" content="{$page.status} error." />
+</svelte:head>
+
 <main>
   <div class="error">
     <h1 class="code">{$page.status} :(</h1>

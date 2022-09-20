@@ -6,6 +6,23 @@
 
 <svelte:head>
   <title>Talwat's Technology & Coding Blog</title>
+  <meta
+    name="description"
+    content="This blog is for technology, programming, and more. It talks about many things such as different build tools and web frameworks. Made by Tal."
+  />
+
+  <meta name="twitter:title" content="Talwat's Technology & Coding Blog" />
+  <meta
+    name="twitter:description"
+    content="This blog is for technology, programming, and more. It talks about many things such as different build tools and web frameworks. Made by Tal."
+  />
+
+  <meta name="og:title" content="Talwat's Technology & Coding Blog" />
+  <meta name="og:url" content="https://talwat.github.io/blog" />
+  <meta
+    name="og:description"
+    content="This blog is for technology, programming, and more. It talks about many things such as different build tools and web frameworks. Made by Tal."
+  />
 </svelte:head>
 
 <main>

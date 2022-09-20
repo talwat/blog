@@ -3,6 +3,8 @@ export interface DocAttributes {
   id: string;
   date: string;
   desc: string;
+  longDesc: string;
+  tags: string[];
 }
 
 export interface Doc {

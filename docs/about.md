@@ -1,5 +1,7 @@
 ---
 title: "About"
+desc: "Who I am"
+longDesc: "Who I am and all about me, what programming languages I like, how I like to code, some facts about me, and my passions."
 ---
 
 ## About me
