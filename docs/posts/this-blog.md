@@ -2,7 +2,7 @@
 title: "This blog"
 date: "9/11/2022"
 desc: "How I made this blog."
-longDesc: "I made this blog using svelte, an open source javascript framework for building web applications. I also utilized sveltekit to complete the website, which is a framework which goes nicely with svelte built on top of vite."
+longDesc: "How I made this blog using svelte, an open source javascript framework, sveltekit, a meta-framework for svelte, and other various programming technologies."
 tags:
     - svelte
     - sveltekit
@@ -39,7 +39,7 @@ Essentially, this blog has an API which allows each web page to get data about e
 
 This method is the cleanest I have found so far, so I will continue using it.
 
-Feel free to look at all the code yourself [here](https://github.com/talwat/blog).
+Feel free to look at all the [code for the blog](https://github.com/talwat/blog) yourself.
 
 ## Why not use something such as Wordpress?
 

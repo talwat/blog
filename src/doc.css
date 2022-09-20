@@ -22,6 +22,7 @@
   margin-bottom: 1.4ch;
   margin-top: 1.4ch;
 }
+
 .doc-content pre {
   background-color: var(--code-bg);
   max-width: 30em;
