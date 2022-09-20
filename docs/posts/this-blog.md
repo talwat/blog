@@ -1,7 +1,7 @@
 ---
-title: "This blog"
+title: "How I made this site"
 date: "9/11/2022"
-desc: "How I made this blog."
+desc: "What technologies and methods I used to create this blog."
 longDesc: "How I made this blog using svelte, an open source javascript framework, sveltekit, a meta-framework for svelte, and other various programming technologies."
 tags:
     - svelte
