@@ -11,6 +11,7 @@
   --fg-secondary: #ccc;
   --code-bg: #282c34;
   --link: hsl(200, 90%, 60%);
+  --link-high-contrast: hsl(190, 100%, 80%);
 }
 
 html,

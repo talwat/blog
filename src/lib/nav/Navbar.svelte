@@ -27,7 +27,7 @@
   <div class="nav-items">
     <div class="left">
       <a href="/blog">
-        <img src="/blog/img/pfp.png" alt="Home" />
+        <img width="25px" height="40px" src="/blog/img/pfp.png" alt="Home" />
       </a>
     </div>
     <div class="right normal-vw">
