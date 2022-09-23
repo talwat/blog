@@ -1,0 +1,38 @@
+<script lang="ts">
+  export let text: string;
+  export let href: string;
+
+  const lowerCase = text.toLowerCase();
+  const normalCase = lowerCase[0].toUpperCase() + lowerCase.slice(1);
+</script>
+
+<div class="item">
+  <a {href}>
+    <img
+      class="{lowerCase}-logo"
+      src="/blog/svg/{lowerCase}.svg"
+      alt="{normalCase} logo"
+    />
+  </a>
+</div>
+
+<style>
+  .item * {
+    height: 2em;
+  }
+
+  /* .twitter-logo {
+    width: 49px;
+    height: 40px;
+  }
+
+  .github-logo {
+    width: 40px;
+    height: 40px;
+  }
+
+  .youtube-logo {
+    width: 58px;
+    height: 40px;
+  } */
+</style>
