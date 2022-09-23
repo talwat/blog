@@ -2,7 +2,12 @@
   export let show: boolean;
 </script>
 
-<button on:click={() => (show = !show)} class="transparent-btn" aria-label="Toggle menu" aria-expanded="{show}">
+<button
+  on:click={() => (show = !show)}
+  class="transparent-btn"
+  aria-label="Toggle menu"
+  aria-expanded={show}
+>
   {#if show}
     <svg
       class="icon"
