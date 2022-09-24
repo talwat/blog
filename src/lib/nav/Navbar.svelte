@@ -8,7 +8,6 @@
 </script>
 
 <script lang="ts">
-  import "/src/app.css";
   import Hamburger from "./hamburger/Hamburger.svelte";
 
   import HamburgerMenu from "./hamburger/HamburgerMenu.svelte";

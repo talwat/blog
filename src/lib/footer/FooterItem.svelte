@@ -22,17 +22,17 @@
   }
 
   .twitter-logo {
-    width: 49px;
-    height: 40px;
+    width: 39px;
+    height: 32px;
   }
 
   .github-logo {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
   }
 
   .youtube-logo {
-    width: 58px;
-    height: 40px;
+    width: 46px;
+    height: 32px;
   }
 </style>

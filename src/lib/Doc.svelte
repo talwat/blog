@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Doc } from "src/docs";
-  import "/src/doc.css";
+  import "/src/css/doc.css";
   import "highlight.js/styles/atom-one-dark.css";
 
   export let doc: Doc;
