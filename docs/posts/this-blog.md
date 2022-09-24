@@ -20,7 +20,7 @@ This blog won't be super professional, as it is only a learning experience, but 
 
 ## The technology I used
 
-I used [svelte](https://svelte.dev/) and [sveltekit](https://kit.svelte.dev/) *(which itself is powered by [vite](https://vitejs.dev/))*. These are two amazingly useful frameworks. Svelte is mainly for the UI itself, while Sveltekit manages things like routing and SSR (server side rendering).
+I used [svelte](https://svelte.dev/) and [sveltekit](https://kit.svelte.dev/) _(which itself is powered by [vite](https://vitejs.dev/))_. These are two amazingly useful frameworks. Svelte is mainly for the UI itself, while Sveltekit manages things like routing and SSR (server side rendering).
 
 For hosting, I am using [github pages](https://pages.github.com/), which allows me to host this blog for free. The [source code](https://github.com/talwat/blog) for this blog is on github, too!
 
@@ -50,13 +50,3 @@ Its much more satisfying and rewarding to make this blog manually.
 ## Conclusion
 
 While this is my first actual post here, I hope to make more and improve the website even further. Thank you for reading.
-
-## Tests
-
-**Bold** text
-
-*Italic* text
-
-```txt
-sus
-```
