@@ -37,14 +37,14 @@
       </h2>
     {/if}
   </div>
-  <div class="doc-content">
+  <article class="doc-content">
     {@html doc.content}
-  </div>
+  </article>
 </div>
 
 <style>
   .master {
-    padding: 0.8em;
+    padding: 2em;
   }
 
   .title {
@@ -63,5 +63,6 @@
   .heading-info {
     border-bottom: 1px solid;
     margin-bottom: 0.4em;
+    padding-bottom: 0.4em;
   }
 </style>

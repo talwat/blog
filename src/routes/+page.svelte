@@ -1,7 +1,12 @@
 <script lang="ts">
+  import Posts from "$lib/post-list/Posts.svelte";
   import type { PageData } from "./$types";
 
   export let data: PageData;
+
+  const sortedPosts = data.posts.sort((a, b) =>
+    new Date(a.date) < new Date(b.date) ? 1 : -1
+  );
 </script>
 
 <svelte:head>
@@ -26,15 +31,11 @@
 </svelte:head>
 
 <main>
-  <h1 class="main-heading">Talwat's Blog</h1>
+  <h1 class="main-heading">Posts</h1>
 
-  <div class="posts">
-    {#each data.posts.sort( (a, b) => (new Date(a.date) < new Date(b.date) ? 1 : -1) ) as post}
-      <div class="post">
-        <a href="/blog/posts/{post.id}">{post.title}</a> - {post.date}
-      </div>
-    {/each}
-  </div>
+  <div class="line" />
+
+  <Posts posts={sortedPosts} />
 </main>
 
 <style>
@@ -42,13 +43,16 @@
     padding: 12px;
   }
 
+  .line {
+    background-color: var(--bg-4);
+    margin-top: 0.7em;
+    margin-bottom: 1.6em;
+    width: auto;
+    height: 1px;
+  }
+
   .main-heading {
     margin-top: 8px;
     margin-bottom: 8px;
-  }
-
-  .posts {
-    display: flex;
-    flex-direction: column;
   }
 </style>
