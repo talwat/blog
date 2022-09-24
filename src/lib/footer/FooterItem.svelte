@@ -21,7 +21,7 @@
     height: 2em;
   }
 
-  /* .twitter-logo {
+  .twitter-logo {
     width: 49px;
     height: 40px;
   }
@@ -34,5 +34,5 @@
   .youtube-logo {
     width: 58px;
     height: 40px;
-  } */
+  }
 </style>
