@@ -33,7 +33,7 @@
   </div>
   <h2 class="title">{post.title}</h2>
   <p class="metadata">
-    {post.date} • {post.desc}
+    {post.desc}
   </p>
 </a>
 
