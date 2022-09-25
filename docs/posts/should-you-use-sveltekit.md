@@ -55,4 +55,4 @@ I think now is the best time to learn how to use it as it just entered release c
 
 If you are creating a single page app, you can still use one of the alternatives mentioned above.
 
-Overall, SvelteKit is an amazing framework and if you don't mind making a [github issue](https://github.com/sveltejs/kit/issues) here and there it works great.ß
+Overall, SvelteKit is an amazing framework and if you don't mind making a [github issue](https://github.com/sveltejs/kit/issues) here and there it works great.
