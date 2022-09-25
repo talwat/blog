@@ -25,7 +25,7 @@
   }
 
   .footer {
-    background-color: var(--bg-1);
+    background-color: var(--bg-secondary);
     height: fit-content;
     padding: 1em;
     width: auto;

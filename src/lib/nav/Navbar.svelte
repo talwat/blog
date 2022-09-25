@@ -55,7 +55,7 @@
   }
 
   .top-bar {
-    background-color: var(--bg-1);
+    background-color: var(--bg-secondary);
     position: fixed;
     top: 0;
     width: 100vw;

@@ -25,7 +25,7 @@
   }
 
   .line {
-    background-color: var(--bg-4);
+    background-color: var(--bg-3);
     margin-top: 0.7em;
     margin-bottom: 1.6em;
     width: auto;

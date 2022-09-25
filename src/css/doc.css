@@ -14,7 +14,7 @@
   bottom: 0;
   left: 0;
   width: 0.3em;
-  background-color: var(--bg-1);
+  background-color: var(--bg-2);
   border-radius: 10px;
 }
 
@@ -81,7 +81,7 @@ th,
 td {
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid var(--bg-4);
+  border: 1px solid var(--bg-3);
 }
 
 .doc-content td,
@@ -93,7 +93,7 @@ th {
 }
 
 .doc-content tr:nth-child(odd) td {
-  background-color: var(--bg-3);
+  background-color: var(--bg-secondary);
 }
 
 .doc-content table {
