@@ -1,4 +1,4 @@
-@import url("./source-sans-pro.css");
+/* @import url("./source-sans-pro.css"); */
 
 .doc-content blockquote {
   padding: 0.8em 0.8em 0.8em 1em;
@@ -38,9 +38,11 @@
 }
 
 .doc-content code {
-  font-family: "Source Sans Pro", monospace;
+  /* font-family: "Source Sans Pro", monospace; */
+  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
   white-space: pre-wrap;
   word-wrap: break-word;
+  font-size: 0.8em;
 }
 
 .doc-content :not(pre) > code {
