@@ -18,6 +18,8 @@ const config = {
     paths: {
       base: "",
     },
+
+    trailingSlash: "never"
   },
 };
 
