@@ -28,18 +28,18 @@ I'm also using various technologies like Typescript to make the whole process ea
 
 A list of additional libraries I am using are:
 
--   [Marked.js](https://marked.js.org/) - A super useful library for rendering [markdown](https://en.wikipedia.org/wiki/Markdown), as all of the posts on this site [including this one](https://github.com/talwat/blog/blob/main/docs/posts/this-blog.md) are written in [markdown](https://en.wikipedia.org/wiki/Markdown).
+-   [Marked.js](https://marked.js.org/) - A super useful library for rendering [markdown](https://en.wikipedia.org/wiki/Markdown), as all of the posts on this site [including this one](https://github.com/talwat/talwat.github.io/blob/main/docs/posts/this-blog.md) are written in [markdown](https://en.wikipedia.org/wiki/Markdown).
 -   [xmlbuilder2](https://oozcitak.github.io/xmlbuilder2/) - This library is mainly used for creating this site's [sitemap](https://www.sitemaps.org/).
 -   [front-matter](https://github.com/jxson/front-matter) - I use this to extract meta data (front-matter) from posts.
 -   [highlight.js](https://highlightjs.org/) - This library is for syntax highlighting, and it allows me to syntax highlight code blocks.
 
 ## How it works
 
-Essentially, this blog has a REST API which allows each web page to get data about each post through a `GET` request. Its content, the description, etc... And then uses that data to display the post. The [about](/blog/about) page is handled very similarly.
+Essentially, this blog has a REST API which allows each web page to get data about each post through a `GET` request. Its content, the description, etc... And then uses that data to display the post. The [about](/about) page is handled very similarly.
 
 This method is the cleanest I have found so far, so I will continue using it.
 
-Feel free to look at all the [code for the blog](https://github.com/talwat/blog) yourself.
+Feel free to look at all the [code for the blog](https://github.com/talwat/talwat.github.io) yourself.
 
 ## Why not use something such as Wordpress?
 
