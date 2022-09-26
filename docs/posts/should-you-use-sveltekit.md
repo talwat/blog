@@ -39,8 +39,8 @@ Svelte also focuses on developer experience, and it is generally very fun and ea
     let text = "hi";
 </script>
 
-<p>{text}</p>
 <!-- Grabs text from the javascript super easily -->
+<p>{text}</p>
 ```
 
 Instead of normal JS which is this:
@@ -52,8 +52,8 @@ Instead of normal JS which is this:
     document.getElementById("text").innerHTML = text; // This code must be ran every time to get the HTML to change
 </script>
 
-<p id="text"></p>
 <!-- Will not update automatically, and you can't actually tell this is getting text from the JS unless you look at the JS itself -->
+<p id="text"></p>
 ```
 
 As you can see, svelte is much easier and simpler.
