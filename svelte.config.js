@@ -19,7 +19,7 @@ const config = {
       base: "",
     },
 
-    trailingSlash: "never"
+    trailingSlash: "ignore"
   },
 };
 
