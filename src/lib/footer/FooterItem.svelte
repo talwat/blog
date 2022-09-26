@@ -10,7 +10,7 @@
   <a {href}>
     <img
       class="{lowerCase}-logo"
-      src="/blog/svg/{lowerCase}.svg"
+      src="/svg/{lowerCase}.svg"
       alt="{normalCase} logo"
     />
   </a>
