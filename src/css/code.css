@@ -1,0 +1,150 @@
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em;
+}
+code.hljs {
+  padding: 3px 5px;
+}
+.hljs {
+  color: var(--fg);
+  background: var(--bg-secondary);
+}
+.hljs-comment,
+.hljs-quote {
+  color: var(--comment);
+  font-style: italic;
+}
+
+.hljs-doctag {
+  color: var(--red); /* unsure */
+}
+
+.hljs-formula {
+  color: red;
+}
+
+.hljs-keyword {
+  color: var(--red);
+}
+
+.hljs-deletion {
+  color: var(--red);
+}
+
+.hljs-name {
+  color: var(--orange);
+}
+
+.hljs-section {
+  color: var(--red);
+}
+
+.hljs-selector-tag {
+  color: var(--purple);
+}
+
+.hljs-subst {
+  color: var(--orange);
+}
+
+.hljs-literal {
+  color: var(--fg);
+}
+
+.hljs-addition {
+  color: var(--green);
+}
+
+.hljs-attribute {
+  color: var(--aqua);
+}
+
+.hljs-meta {
+  color: var(--purple);
+}
+
+.hljs-regexp,
+.hljs-string {
+  color: var(--yellow);
+}
+
+.hljs-attr {
+  color: var(--fg);
+}
+
+.hljs-number {
+  color: var(--green);
+}
+
+.hljs-selector-attr {
+  color: var(--red);
+}
+
+.hljs-selector-class {
+  color: var(--red);
+}
+
+.hljs-selector-pseudo {
+  color: var(--purple);
+}
+
+.hljs-template-variable {
+  color: var(--fg);
+}
+
+.hljs-type {
+  color: var(--blue);
+}
+
+.hljs-variable {
+  color: var(--fg);
+}
+
+.hljs-bullet {
+  color: var(--red);
+}
+
+.hljs-link {
+  color: var(--green);
+}
+
+.hljs-selector-id {
+  color: var(--yellow);
+}
+
+.hljs-symbol {
+  color: var(--purple);
+}
+
+.hljs-title {
+  color: var(--green);
+}
+
+.hljs-built_in {
+  color: var(--blue);
+}
+
+.hljs-class {
+  color: yellow;
+}
+
+.hljs-title {
+  color: var(--orange);
+}
+
+.hljs-title.class_ {
+  color: var(--aqua);
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: 700;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}

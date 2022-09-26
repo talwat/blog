@@ -1,5 +1,6 @@
 <script lang="ts">
   import type { DocAttributes } from "src/docs";
+  import Tags from "./Tags.svelte";
 
   export let post: DocAttributes;
 </script>
@@ -35,6 +36,8 @@
   <p class="metadata">
     {post.desc}
   </p>
+
+  <Tags tags={post.tags} />
 </a>
 
 <style>

@@ -12,6 +12,10 @@
 <svelte:head>
   <title>Talwat's Technology & Coding Blog</title>
   <meta
+    name="keywords"
+    content="coding, programming, technology, linux, vite, html, css, html5, js, javascript, ts, typescript, svelte, sveltekit, web, websites, website, blog"
+  />
+  <meta
     name="description"
     content="This blog is for technology, programming, and more. It talks about many things such as different build tools and web frameworks. Made by Tal."
   />
@@ -44,7 +48,7 @@
   }
 
   .line {
-    background-color: var(--bg-3);
+    background-color: var(--bg-pop);
     margin-top: 0.7em;
     margin-bottom: 1.6em;
     width: auto;

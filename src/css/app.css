@@ -12,9 +12,17 @@
   --link: #7fbbb3;
 
   --blue: #7fbbb3;
+  --red: #e67e80;
+  --comment: #859289;
+  --yellow: #dbbc7f;
+  --green: #a7c080;
+  --orange: #e69875;
+  --purple: #d699b6;
+  --aqua: #83c092;
 
-  --bg-primary: #2f383e;
-  --bg-secondary: #374247;
+  --bg-primary: var(--bg-0);
+  --bg-secondary: var(--bg-1);
+  --bg-pop: var(--bg-2);
 }
 
 html,

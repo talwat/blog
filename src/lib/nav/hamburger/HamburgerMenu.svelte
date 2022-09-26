@@ -29,7 +29,7 @@
     margin-top: 0.75rem;
     margin-bottom: 0.75rem;
 
-    background-color: var(--bg-2);
+    background-color: var(--bg-pop);
   }
 
   .nav-items {
@@ -44,6 +44,6 @@
     background-color: inherit;
     z-index: 1;
     padding: 1em;
-    border-top: 1px var(--bg-2) solid !important; /* Important for fixing a bug? in svelte transition */
+    border-top: 1px var(--bg-pop) solid !important; /* Important for fixing a bug? in svelte transition */
   }
 </style>

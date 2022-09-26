@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { Doc } from "src/docs";
   import "/src/css/doc.css";
-  import "highlight.js/styles/atom-one-dark.css";
+  import "/src/css/code.css";
 
   export let doc: Doc;
 </script>
@@ -9,6 +9,7 @@
 <svelte:head>
   <title>Talwat's Blog - {doc.attributes.title}</title>
   <meta name="description" content={doc.attributes.longDesc} />
+  <meta name="keywords" content={doc.attributes.tags.join(", ")} />
 
   <meta name="twitter:title" content="Talwat's Blog - {doc.attributes.title}" />
   <meta name="twitter:description" content={doc.attributes.longDesc} />

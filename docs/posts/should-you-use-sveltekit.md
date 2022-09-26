@@ -8,8 +8,11 @@ tags:
     - sveltekit
     - vite
     - js
-    - blog
+    - javascript
     - site
+    - web
+    - website
+    - web-app
 ---
 
 ## What is sveltekit?
@@ -20,6 +23,40 @@ It enables you to do a bunch of things you couldn't do with just svelte. Things 
 It was created by the same team who made svelte itself, and uses [vite](https://vitejs.dev/) under the hood.
 
 SvelteKit is essentially just a vite plugin which adds a lot of extra functionality.
+
+## What is svelte?
+
+Svelte is a javascript framework, used for making high performance web apps.
+
+Like all javascript frameworks, it makes the process of making apps easier.
+
+But svelte, instead of using a VirtualDOM (less efficient) compiles the code you write into native JS (much more efficient).
+
+Svelte also focuses on developer experience, and it is generally very fun and easy to use. It follows a declarative model that goes as such:
+
+```html
+<script>
+    let text = "hi";
+</script>
+
+<p>{text}</p>
+<!-- Grabs text from the javascript super easily -->
+```
+
+Instead of normal JS which is this:
+
+```html
+<script>
+    let text = "hi";
+
+    document.getElementById("text").innerHTML = text; // This code must be ran every time to get the HTML to change
+</script>
+
+<p id="text"></p>
+<!-- Will not update automatically, and you can't actually tell this is getting text from the JS unless you look at the JS itself -->
+```
+
+As you can see, svelte is much easier and simpler.
 
 ## Sveltekit's state right now
 

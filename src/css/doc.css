@@ -14,7 +14,7 @@
   bottom: 0;
   left: 0;
   width: 0.3em;
-  background-color: var(--bg-2);
+  background-color: var(--bg-pop);
   border-radius: 10px;
 }
 
@@ -26,8 +26,8 @@
 }
 
 .doc-content pre {
-  background-color: var(--code-bg);
-  max-width: 30em;
+  background-color: var(--bg-secondary);
+  max-width: 50em;
   width: auto;
   padding: 0.5em;
   border-radius: 0.5em;
