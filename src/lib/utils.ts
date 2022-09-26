@@ -8,7 +8,7 @@ import type { Doc, DocAttributes } from "src/docs";
 export function renderMd(id: string, raw: string): Doc {
   const frontMatter = fm(raw);
 
-  /** Huge mess of parsing and appending and whatnot, should probably fix it later **/
+  /** Huge mess of parsing and appending and whatnot, should probably fix it later */
   const renderer = {
     heading(text: string, level: number) {
       const textID = text.toLowerCase().replaceAll(" ", "-");
