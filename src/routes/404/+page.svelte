@@ -3,4 +3,5 @@
   import Error from "$lib/Error.svelte";
 </script>
 
-<Error page={$page} />
+<!-- Specify status, but leave everything else -->
+<Error page={{ ...$page, status: 404 }} />
