@@ -20,7 +20,7 @@
   <meta name="og:title" content="Talwat's Blog - {doc.attributes.title}" />
   <meta
     name="og:url"
-    content="https://talwat.github.io/{doc.attributes.id !== 'about'
+    content="https://talwat.github.io/blog/{doc.attributes.id !== 'about'
       ? 'post/'
       : ''}
       {doc.attributes.id}"

@@ -16,7 +16,7 @@ export const GET: RequestHandler = async () => {
     xml
       .ele("url")
       .ele("loc")
-      .txt(`https://talwat.github.io/${loc}`)
+      .txt(`https://talwat.github.io/blog/${loc}`)
       .up()
       .ele("priority")
       .txt(priority.toString());
@@ -26,7 +26,7 @@ export const GET: RequestHandler = async () => {
     xml
       .ele("url")
       .ele("loc")
-      .txt(`https://talwat.github.io/${loc}`)
+      .txt(`https://talwat.github.io/blog/${loc}`)
       .up()
       .ele("priority")
       .txt(priority.toString())

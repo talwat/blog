@@ -1,4 +1,4 @@
 # https://www.robotstxt.org/robotstxt.html
-Sitemap: https://talwat.github.io/sitemap.xml
+Sitemap: https://talwat.github.io/blog/sitemap.xml
 User-agent: *
 Disallow:

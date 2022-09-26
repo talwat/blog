@@ -27,7 +27,7 @@
   />
 
   <meta name="og:title" content="Talwat's Technology & Coding Blog" />
-  <meta name="og:url" content="https://talwat.github.io" />
+  <meta name="og:url" content="https://talwat.github.io/blog" />
   <meta
     name="og:description"
     content="This blog is for technology, programming, and more. It talks about many things such as different build tools and web frameworks. Made by Tal."

@@ -15,7 +15,7 @@ export function renderMd(id: string, raw: string): Doc {
 
       const sections = level === 1 ? "" : "</section><section>"; // Close previous section and open a new one
       const headingAnchorText = `<h${level} id="${textID}" class="heading-anchor-txt">${text}</h${level}>`;
-      const anchor = `<a class="heading-anchor" href="/${id}#${textID}">${headingAnchorText}</a>`;
+      const anchor = `<a class="heading-anchor" href="/blog/${id}#${textID}">${headingAnchorText}</a>`;
 
       return `${sections} ${anchor}`;
     },

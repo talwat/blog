@@ -5,7 +5,7 @@
   export let post: DocAttributes;
 </script>
 
-<a href="/posts/{post.id}" class="post post-link">
+<a href="/blog/posts/{post.id}" class="post post-link">
   <div class="date">
     <svg
       class="calender-logo"

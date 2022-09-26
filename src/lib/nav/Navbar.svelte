@@ -16,7 +16,7 @@
   let showMenu = false;
 
   const items: NavItems = [
-    { href: "/about", text: "About" },
+    { href: "/blog/about", text: "About" },
     "bullet",
     { href: "https://github.com/talwat", text: "Github" },
   ];
@@ -25,8 +25,8 @@
 <nav class="top-bar">
   <div class="nav-items">
     <div class="left">
-      <a href="/">
-        <img width="25px" height="40px" src="/img/pfp.png" alt="Home" />
+      <a href="/blog">
+        <img width="25px" height="40px" src="/blog/img/pfp.png" alt="Home" />
       </a>
     </div>
     <div class="right normal-vw">

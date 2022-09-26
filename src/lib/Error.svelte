@@ -26,7 +26,7 @@
 
     <div class="line" />
 
-    <a class="return-home" href="/">Return home</a>
+    <a class="return-home" href="/blog">Return home</a>
   </div>
 </main>
 
