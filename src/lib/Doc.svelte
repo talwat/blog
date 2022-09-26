@@ -9,7 +9,9 @@
 <svelte:head>
   <title>Talwat's Blog - {doc.attributes.title}</title>
   <meta name="description" content={doc.attributes.longDesc} />
-  <meta name="keywords" content={doc.attributes.tags.join(", ")} />
+  {#if doc.attributes.tags}
+    <meta name="keywords" content={doc.attributes.tags.join(", ")} />
+  {/if}
 
   <meta name="twitter:title" content="Talwat's Blog - {doc.attributes.title}" />
   <meta name="twitter:description" content={doc.attributes.longDesc} />

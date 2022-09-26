@@ -15,5 +15,7 @@
     display: flex;
     gap: 0.3em;
     margin-top: 0.3em;
+    align-items: center;
+    flex-wrap: wrap;
   }
 </style>

@@ -3,7 +3,6 @@ title: "Highlighting test for highlight.js"
 date: "9/25/2022"
 desc: "Highlighting test for highlight.js."
 longDesc: "Highlighting test for highlight.js"
-tags: []
 ---
 
 ```html

@@ -37,7 +37,9 @@
     {post.desc}
   </p>
 
-  <Tags tags={post.tags} />
+  {#if post.tags}
+    <Tags tags={post.tags} />
+  {/if}
 </a>
 
 <style>
