@@ -3,7 +3,7 @@ import { error } from "@sveltejs/kit";
 import type { Doc } from "src/docs";
 
 export const load: PageLoad = async ({ fetch }) => {
-  const resp = await fetch(`/blog/api/docs/about`);
+  const resp = await fetch(`api/docs/about`);
 
   if (resp.status === 404) {
     throw error(404, `About page not found`);
