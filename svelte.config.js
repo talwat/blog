@@ -14,12 +14,6 @@ const config = {
       pages: "dist",
       assets: "dist",
     }),
-
-    paths: {
-      base: "",
-    },
-
-    trailingSlash: "always"
   },
 };
 
