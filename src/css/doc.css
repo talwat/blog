@@ -26,7 +26,7 @@
 }
 
 .doc-content pre {
-  background-color: var(--bg-secondary);
+  background-color: var(--code-bg);
   max-width: 50em;
   width: auto;
   padding: 0.5em;
