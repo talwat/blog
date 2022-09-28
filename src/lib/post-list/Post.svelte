@@ -30,12 +30,15 @@
         y2="10"
       /></svg
     >
-    <p class="date-txt">{post?.date}</p>
+    <p class="date-txt">{post.date}</p>
   </div>
   <h2 class="title">{post.title}</h2>
-  <p class="metadata">
-    {post.desc}
-  </p>
+
+  {#if post.desc}
+    <p class="desc">
+      {post.desc}
+    </p>
+  {/if}
 
   {#if post.tags}
     <Tags tags={post.tags} />
@@ -66,11 +69,11 @@
   }
 
   .title,
-  .metadata {
+  .desc {
     margin: 0;
   }
 
-  .metadata {
+  .desc {
     color: var(--fg-secondary);
     font-size: 0.8em;
   }

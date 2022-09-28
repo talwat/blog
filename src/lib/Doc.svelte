@@ -8,16 +8,19 @@
 
 <svelte:head>
   <title>Talwat's Blog - {doc.attributes.title}</title>
-  <meta name="description" content={doc.attributes.longDesc} />
+  <meta name="twitter:title" content="Talwat's Blog - {doc.attributes.title}" />
+  <meta name="og:title" content="Talwat's Blog - {doc.attributes.title}" />
+
+  {#if doc.attributes.longDesc}
+    <meta name="description" content={doc.attributes.longDesc} />
+    <meta name="twitter:description" content={doc.attributes.longDesc} />
+    <meta name="og:description" content={doc.attributes.longDesc} />
+  {/if}
 
   {#if doc.attributes.tags}
     <meta name="keywords" content={doc.attributes.tags.join(", ")} />
   {/if}
 
-  <meta name="twitter:title" content="Talwat's Blog - {doc.attributes.title}" />
-  <meta name="twitter:description" content={doc.attributes.longDesc} />
-
-  <meta name="og:title" content="Talwat's Blog - {doc.attributes.title}" />
   <meta
     name="og:url"
     content="https://talwat.github.io/blog/{doc.attributes.id !== 'about'
@@ -25,7 +28,6 @@
       : ''}
       {doc.attributes.id}"
   />
-  <meta name="og:description" content={doc.attributes.longDesc} />
 </svelte:head>
 
 <div class="master">
