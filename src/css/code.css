@@ -49,7 +49,7 @@ code.hljs {
 }
 
 .hljs-literal {
-  color: var(--fg);
+  color: var(--purple);
 }
 
 .hljs-addition {
@@ -97,6 +97,26 @@ code.hljs {
   color: var(--blue);
 }
 
+.language-html .hljs-meta {
+  color: var(--orange);
+}
+
+.language-html .hljs-title {
+  color: var(--green);
+}
+
+.language-html .hljs-tag .hljs-attr {
+  color: var(--yellow)
+}
+
+.language-html .hljs-tag .hljs-string {
+  color: var(--green)
+}
+
+.language-html .hljs-meta .hljs-keyword  {
+  color: var(--yellow);
+}
+
 .hljs-variable {
   color: var(--fg);
 }
@@ -126,11 +146,15 @@ code.hljs {
 }
 
 .hljs-class {
-  color: yellow;
+  color: var(--fg);
 }
 
 .hljs-title {
   color: var(--orange);
+}
+
+.hljs-tag {
+  color: var(--green)
 }
 
 .hljs-title.class_ {
