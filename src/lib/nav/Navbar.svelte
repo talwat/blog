@@ -11,9 +11,12 @@
   import Hamburger from "./hamburger/Hamburger.svelte";
 
   import HamburgerMenu from "./hamburger/HamburgerMenu.svelte";
+  import Search from "./Search.svelte";
+  import SearchMenu from "./SearchMenu.svelte";
   import Seperator from "./Seperator.svelte";
 
   let showMenu = false;
+  let search: string;
 
   const items: NavItems = [
     { href: "/blog/about", text: "About" },
@@ -29,6 +32,11 @@
         <img width="25px" height="40px" src="/blog/img/pfp.png" alt="Home" />
       </a>
     </div>
+
+    <div class="normal-vw">
+      <Search bind:search />
+    </div>
+
     <div class="right normal-vw">
       {#each items as item}
         {#if item === "bullet"}
@@ -44,9 +52,17 @@
     </div>
   </div>
 
-  {#if showMenu}
-    <HamburgerMenu {items} />
-  {/if}
+  <div class="small-vw">
+    {#if showMenu}
+      <HamburgerMenu {items} />
+    {/if}
+  </div>
+
+  <div class="normal-vw">
+    {#if search}
+      <SearchMenu bind:search />
+    {/if}
+  </div>
 </nav>
 
 <style>
@@ -115,6 +131,10 @@
     }
 
     .small-vw {
+      display: initial !important;
+    }
+
+    .right.small-vw {
       display: flex !important;
     }
 

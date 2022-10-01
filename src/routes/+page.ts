@@ -1,11 +1,11 @@
-import type { DocAttributes } from "src/docs";
+import { getPosts, posts } from "$lib/posts";
+import { get } from "svelte/store";
 import type { PageLoad } from "./$types";
 
 export const load: PageLoad = async ({ fetch }) => {
-  const resp = await fetch(`/blog/api/docs/posts/list`);
-  const json: DocAttributes[] = (await resp.json()) as DocAttributes[];
+  await getPosts(fetch);
 
   return {
-    posts: json,
+    posts: get(posts),
   };
 };

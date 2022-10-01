@@ -106,14 +106,14 @@ code.hljs {
 }
 
 .language-html .hljs-tag .hljs-attr {
-  color: var(--yellow)
+  color: var(--yellow);
 }
 
 .language-html .hljs-tag .hljs-string {
-  color: var(--green)
+  color: var(--green);
 }
 
-.language-html .hljs-meta .hljs-keyword  {
+.language-html .hljs-meta .hljs-keyword {
   color: var(--yellow);
 }
 
@@ -154,7 +154,7 @@ code.hljs {
 }
 
 .hljs-tag {
-  color: var(--green)
+  color: var(--green);
 }
 
 .hljs-title.class_ {
