@@ -27,6 +27,27 @@ jobs:
           npm install
           npm run build
 
+  lighthouse:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Setup node 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+
+      - name: "Install lighthouse"
+        run: npm install && npm install -g @lhci/cli@0.8.x
+
+      - name: "Build website"
+        run: npm run build
+
+      - name: "Run lighthouse test"
+        run: lhci autorun --staticDistDir dist
+
   eslint:
     runs-on: ubuntu-latest
 
