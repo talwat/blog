@@ -11,8 +11,8 @@
   import Hamburger from "./hamburger/Hamburger.svelte";
 
   import HamburgerMenu from "./hamburger/HamburgerMenu.svelte";
-  import Search from "./Search.svelte";
-  import SearchMenu from "./SearchMenu.svelte";
+  import Search from "./search/Search.svelte";
+  import SearchMenu from "./search/SearchMenu.svelte";
   import Seperator from "./Seperator.svelte";
 
   let showMenu = false;

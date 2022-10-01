@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Posts from "$lib/post-list/Posts.svelte";
+  import Posts from "$lib/post-list/posts/Posts.svelte";
   import type { PageData } from "./$types";
 
   export let data: PageData;

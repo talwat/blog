@@ -1,16 +1,11 @@
 <script lang="ts">
   import type { DocAttributes } from "src/docs";
   import { posts, getPosts } from "$lib/posts";
-  import { onMount } from "svelte";
 
   export let search: string;
   let filteredPosts: DocAttributes[] = [];
 
   $: filteredPosts = filter($posts, search);
-
-  onMount(async () => {
-    getPosts(fetch);
-  });
 
   function filter(posts: DocAttributes[], query: string): DocAttributes[] {
     const filteredPosts = [];

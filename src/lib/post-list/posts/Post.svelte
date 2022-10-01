@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { DocAttributes } from "src/docs";
-  import Tags from "./Tags.svelte";
+  import Tags from "../tags/Tags.svelte";
 
   export let post: DocAttributes;
 </script>
