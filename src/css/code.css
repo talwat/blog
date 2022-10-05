@@ -117,6 +117,10 @@ code.hljs {
   color: var(--yellow);
 }
 
+.language-html .hljs-keyword, .language-js .hljs-keyword, .language-ts .hljs-keyword {
+  color: var(--orange);
+}
+
 .hljs-variable {
   color: var(--fg);
 }
