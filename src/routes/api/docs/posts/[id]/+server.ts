@@ -40,5 +40,5 @@ export const GET: RequestHandler = async ({ params }) => {
     }
   }
 
-  return json(renderMd(`posts/${params.id}`, raw));
+  return json(renderMd(params.id, raw, `posts/${params.id}`));
 };

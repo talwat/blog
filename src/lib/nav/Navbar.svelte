@@ -8,6 +8,9 @@
 </script>
 
 <script lang="ts">
+  import { getPosts } from "$lib/posts";
+  import { onMount } from "svelte";
+
   import Hamburger from "./hamburger/Hamburger.svelte";
 
   import HamburgerMenu from "./hamburger/HamburgerMenu.svelte";
@@ -23,6 +26,10 @@
     "bullet",
     { href: "https://github.com/talwat", text: "Github" },
   ];
+
+  onMount(() => {
+    getPosts(fetch);
+  });
 </script>
 
 <nav class="top-bar">

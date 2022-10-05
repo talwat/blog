@@ -5,7 +5,7 @@ import fs from "fs/promises";
 import path from "path";
 import type { Doc, DocAttributes } from "src/docs";
 
-export function renderMd(id: string, raw: string): Doc {
+export function renderMd(id: string, raw: string, path: string = id): Doc {
   const frontMatter = fm(raw);
 
   /** FIXME: Huge mess of parsing and appending and whatnot, don't touch */
@@ -15,7 +15,7 @@ export function renderMd(id: string, raw: string): Doc {
 
       const sections = level === 1 ? "" : "</section><section>"; // Close previous section and open a new one
       const headingAnchorText = `<h${level} id="${textID}" class="heading-anchor-txt">${text}</h${level}>`;
-      const anchor = `<a class="heading-anchor" href="/blog/${id}#${textID}">${headingAnchorText}</a>`;
+      const anchor = `<a class="heading-anchor" href="/blog/${path}#${textID}">${headingAnchorText}</a>`;
 
       return `${sections} ${anchor}`;
     },
@@ -33,9 +33,13 @@ export function renderMd(id: string, raw: string): Doc {
     headerIds: false,
   });
 
+  const attributes = frontMatter.attributes as DocAttributes;
+
+  attributes.id = id;
+
   return {
     content: `<section>${parsedHTML.trim()}</section>`,
-    attributes: frontMatter.attributes as DocAttributes,
+    attributes: attributes,
   };
 }
 

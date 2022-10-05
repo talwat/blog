@@ -17,8 +17,8 @@ export async function getPosts(
     init?: RequestInit | undefined
   ) => Promise<Response>
 ) {
-  if (get(posts).length == 0) {
-    const resp = await fetch(`/blog/api/docs/posts/list`);
-    posts.set((await resp.json()) as DocAttributes[]);
-  }
+  if (get(posts).length !== 0) return;
+
+  const resp = await fetch(`/blog/api/docs/posts/list`);
+  posts.set((await resp.json()) as DocAttributes[]);
 }

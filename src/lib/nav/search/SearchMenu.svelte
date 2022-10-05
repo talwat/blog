@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { DocAttributes } from "src/docs";
-  import { posts, getPosts } from "$lib/posts";
+  import { posts } from "$lib/posts";
 
   export let search: string;
   let filteredPosts: DocAttributes[] = [];

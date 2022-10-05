@@ -4,6 +4,10 @@
   import "/src/css/code.css";
 
   export let doc: Doc;
+
+  const url = `https://talwat.github.io/blog/${
+    doc.attributes.id !== "about" ? "posts/" : ""
+  }${doc.attributes.id}`;
 </script>
 
 <svelte:head>
@@ -21,26 +25,44 @@
     <meta name="keywords" content={doc.attributes.tags.join(", ")} />
   {/if}
 
-  <meta
-    name="og:url"
-    content="https://talwat.github.io/blog/{doc.attributes.id !== 'about'
-      ? 'post/'
-      : ''}
-      {doc.attributes.id}"
-  />
+  <meta name="og:url" content={url} />
 </svelte:head>
 
 <div class="master">
   <div class="heading-info">
     <h1 class="title">{doc.attributes.title}</h1>
     {#if doc.attributes.date && doc.attributes.desc}
-      <h2 class="metadata">
-        {new Date(doc.attributes.date).toLocaleDateString("en", {
-          day: "numeric",
-          month: "long",
-          year: "numeric",
-        })} - {doc.attributes.desc}
-      </h2>
+      <div class="metadata">
+        <h2 class="metadata-txt">
+          {new Date(doc.attributes.date).toLocaleDateString("en", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })} - {doc.attributes.desc}
+        </h2>
+        <div class="share">
+          <a
+            class="share-twitter share-link"
+            href="https://twitter.com/intent/tweet?text={url}          "
+          >
+            <img
+              class="twitter-icon share-icon"
+              alt="Twitter logo"
+              src="/blog/svg/twitter.svg"
+            />
+          </a>
+          <a
+            class="share-facebook share-link"
+            href="http://www.facebook.com/share.php?u={url}"
+          >
+            <img
+              class="facebook-icon share-icon"
+              alt="Facebook logo"
+              src="/blog/svg/facebook.svg"
+            />
+          </a>
+        </div>
+      </div>
     {/if}
   </div>
   <article class="doc-content">
@@ -53,6 +75,26 @@
     padding: 2em;
   }
 
+  .share {
+    display: flex;
+    margin: 0;
+    gap: 0.6em;
+  }
+
+  .share-icon {
+    display: block;
+  }
+
+  .twitter-icon {
+    height: 20px;
+    width: 24px;
+  }
+
+  .facebook-icon {
+    height: 20px;
+    width: 20px;
+  }
+
   .title {
     color: var(--fg);
     font-size: 3em;
@@ -60,10 +102,18 @@
     margin-top: 0.25em;
   }
 
-  .metadata {
+  .metadata-txt {
     color: var(--fg-secondary);
-    margin: 0.3em 0 0.3em 0;
     font-size: 1.1em;
+    margin: 0;
+  }
+
+  .metadata {
+    display: flex;
+    flex-direction: row;
+    gap: 0.6em;
+    margin: 0.33em 0 0.33em 0;
+    align-items: center;
   }
 
   .heading-info {
