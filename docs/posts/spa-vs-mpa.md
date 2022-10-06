@@ -1,8 +1,8 @@
 ---
-title: "Single Page Applications VS Multi Page Applications"
+title: "Single Page Apps VS Multi Page Apps"
 date: "10/5/2022"
-desc: "The differences between Single Page Web Applications and Multi Page Web Applications."
-longDesc: "The various differences between Single Page Web Applications and Multi Page Web Applications on the web. This post covers each ones use case and some implementations of them"
+desc: "The differences between Single Page Web Apps and Multi Page Web Apps."
+longDesc: "The various differences between Single Page Web Apps and Multi Page Web Apps on the web. This post covers each one and some uses of them"
 tags:
     - svelte
     - sveltekit
