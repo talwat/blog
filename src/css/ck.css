@@ -1,0 +1,82 @@
+.ck *,
+:root {
+  --ck-color-base-background: var(--bg-primary);
+  --ck-color-base-border: var(--bg-pop);
+  --ck-color-base-action: var(--green);
+  --ck-color-base-focus: var(--green);
+  --ck-color-base-text: var(--fg);
+  --ck-color-base-active: var(--aqua);
+  --ck-color-base-active-focus: var(--green);
+  --ck-color-base-error: var(--red);
+  --ck-color-focus-border: var(--green);
+  --ck-color-focus-outer-shadow: var(--green);
+  --ck-color-focus-disabled-shadow: #e67e804d;
+  --ck-color-focus-error-shadow: #e67e804d;
+  --ck-color-text: var(--ck-color-base-text);
+  --ck-color-labeled-field-label-background: var(--bg-primary);
+  --ck-color-button-default-hover-background: var(--bg-secondary);
+  --ck-color-button-default-active-background: var(--bg-pop);
+  --ck-color-button-on-background: var(--bg-secondary);
+  --ck-color-button-on-hover-background: var(--bg-pop);
+  --ck-color-button-on-active-background: var(--bg-4);
+  --ck-color-button-on-disabled-background: var(--bg-5);
+  --ck-color-button-on-color: var(--green);
+  --ck-color-button-action-background: var(--ck-color-base-action);
+  --ck-color-button-action-text: var(--ck-color-base-background);
+  --ck-color-button-save: var(--green);
+  --ck-color-button-cancel: var(--red);
+  --ck-color-switch-button-inner-background: var(--ck-color-base-background);
+  --ck-color-dropdown-panel-background: var(--ck-color-base-background);
+  --ck-color-dropdown-panel-border: var(--ck-color-base-border);
+  --ck-color-input-background: var(--ck-color-base-background);
+  --ck-color-input-border: var(--ck-color-base-border);
+  --ck-color-input-error-border: var(--ck-color-base-error);
+  --ck-color-input-text: var(--ck-color-base-text);
+  --ck-color-input-disabled-border: var(--ck-color-base-border);
+  --ck-color-input-disabled-text: var(--fg-secondary);
+  --ck-color-list-background: var(--ck-color-base-background);
+  --ck-color-list-button-hover-background: var(
+    --ck-color-button-default-hover-background
+  );
+  --ck-color-list-button-on-background: var(--ck-color-button-on-color);
+  --ck-color-list-button-on-background-focus: var(--ck-color-button-on-color);
+  --ck-color-list-button-on-text: var(--ck-color-base-background);
+  --ck-color-panel-background: var(--ck-color-base-background);
+  --ck-color-panel-border: var(--ck-color-base-border);
+  --ck-color-toolbar-background: var(--ck-color-base-background);
+  --ck-color-toolbar-border: var(--ck-color-base-border);
+  --ck-color-tooltip-background: var(--ck-color-base-text);
+  --ck-color-tooltip-text: var(--ck-color-base-background);
+  --ck-color-upload-bar-background: var(--aqua);
+  --ck-color-link-default: var(--blue);
+  --ck-disabled-opacity: 0.5;
+  --ck-focus-outer-shadow-geometry: 0 0 0 3px;
+  --ck-focus-outer-shadow: var(--ck-focus-outer-shadow-geometry)
+    var(--ck-color-focus-outer-shadow);
+  --ck-focus-disabled-outer-shadow: var(--ck-focus-outer-shadow-geometry)
+    var(--ck-color-focus-disabled-shadow);
+  --ck-focus-error-outer-shadow: var(--ck-focus-outer-shadow-geometry)
+    var(--ck-color-focus-error-shadow);
+  --ck-focus-ring: 1px solid var(--ck-color-focus-border);
+  --ck-color-split-button-hover-background: transparent;
+  --ck-color-split-button-hover-border: var(--bg-pop);
+  --ck-color-switch-button-off-background: var(--bg-pop);
+  --ck-color-switch-button-off-hover-background: var(--bg-4);
+  --ck-color-switch-button-on-background: var(--green);
+  --ck-color-switch-button-on-hover-background: var(--green);
+
+  /* --ck-color-engine-placeholder-text: yellow;
+  --ck-color-editable-blur-selection: red;
+  --ck-color-color-grid-check-icon: green;
+  --ck-color-resizer-tooltip-background: green;
+  --ck-color-resizer-tooltip-text: green;
+  --ck-color-button-action-hover-background: red;
+  --ck-color-button-action-active-background: red;
+  --ck-color-button-action-disabled-background: red;
+  --ck-color-input-disabled-background: red;
+  --ck-color-base-foreground: yellow;
+  --ck-color-upload-placeholder-loader: red;
+  --ck-color-image-caption-background: red;
+  --ck-color-image-caption-text: yellow;
+  --ck-color-image-caption-highligted-background: red; */
+}
