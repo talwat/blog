@@ -5,6 +5,8 @@ import fs from "fs/promises";
 import path from "path";
 import type { Doc, DocAttributes } from "src/docs";
 
+import { error } from "@sveltejs/kit";
+
 export function renderMd(id: string, raw: string, path: string = id): Doc {
   const frontMatter = fm(raw);
 
@@ -56,4 +58,28 @@ export async function getListOfPosts(): Promise<DocAttributes[]> {
   }
 
   return posts;
+}
+
+export async function getRawDoc(path: string) {
+  /** Error thrown by fs.readFile **/
+  interface FSError {
+    code: string;
+  }
+
+  try {
+    return await fs.readFile(path, "utf-8");
+  } catch (err) {
+    const fsError = err as FSError;
+
+    if (
+      // Check for known 404 error
+      fsError.code !== undefined &&
+      fsError.code === "ENOENT"
+    ) {
+      throw error(404, "Not found");
+    } else {
+      // No clue what the error is, throw it
+      throw err;
+    }
+  }
 }
