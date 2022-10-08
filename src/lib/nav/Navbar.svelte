@@ -36,7 +36,7 @@
   <div class="nav-items">
     <div class="left">
       <a href="/blog">
-        <img width="25px" height="40px" src="/blog/img/pfp.png" alt="Home" />
+        <img width="25" height="40" src="/blog/img/pfp.png" alt="Home" />
       </a>
     </div>
 

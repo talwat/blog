@@ -3,7 +3,7 @@
   export let name: string;
 </script>
 
-<a title="Share To {name}" {href}>
+<a title="Share to {name}" aria-label="Share to {name}" {href}>
   <slot />
 </a>
 

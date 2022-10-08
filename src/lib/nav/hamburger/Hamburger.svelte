@@ -7,6 +7,7 @@
   class="transparent-btn"
   aria-label="Toggle menu"
   aria-expanded={show}
+  aria-controls="menu"
 >
   {#if show}
     <svg
