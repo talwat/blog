@@ -19,7 +19,12 @@
       <line x1="50" y2="50" />
     </svg>
   </button>
-  <input class="search" placeholder="Search" type="text" bind:value={search} />
+  <input
+    class="search transparent-btn"
+    placeholder="Search"
+    type="text"
+    bind:value={search}
+  />
 </div>
 
 <style>
@@ -37,10 +42,6 @@
 
   .search {
     color: var(--fg);
-    padding: 0;
-    margin: 0;
-    border: 0;
-    background-color: transparent;
     border: 2px var(--bg-pop) solid;
     padding: 0.5em;
     padding-left: calc(0.5em + 24px);

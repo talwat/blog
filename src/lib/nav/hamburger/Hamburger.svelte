@@ -30,13 +30,6 @@
 </button>
 
 <style>
-  .transparent-btn {
-    background: 0;
-    border: 0;
-    margin: 0;
-    padding: 0;
-  }
-
   .icon {
     display: block;
     fill: var(--fg);

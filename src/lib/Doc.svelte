@@ -2,6 +2,7 @@
   import type { Doc } from "src/docs";
   import "/src/css/doc.css";
   import "/src/css/code.css";
+  import Share from "./share/Share.svelte";
 
   export let doc: Doc;
 
@@ -40,28 +41,7 @@
             year: "numeric",
           })} - {doc.attributes.desc}
         </h2>
-        <div class="share">
-          <a
-            class="share-twitter share-link"
-            href="https://twitter.com/intent/tweet?text={url}          "
-          >
-            <img
-              class="twitter-icon share-icon"
-              alt="Twitter logo"
-              src="/blog/svg/twitter.svg"
-            />
-          </a>
-          <a
-            class="share-facebook share-link"
-            href="http://www.facebook.com/share.php?u={url}"
-          >
-            <img
-              class="facebook-icon share-icon"
-              alt="Facebook logo"
-              src="/blog/svg/facebook.svg"
-            />
-          </a>
-        </div>
+        <Share {url} />
       </div>
     {/if}
   </div>
@@ -73,26 +53,7 @@
 <style>
   .master {
     padding: 2em;
-  }
-
-  .share {
-    display: flex;
-    margin: 0;
-    gap: 0.6em;
-  }
-
-  .share-icon {
-    display: block;
-  }
-
-  .twitter-icon {
-    height: 20px;
-    width: 24px;
-  }
-
-  .facebook-icon {
-    height: 20px;
-    width: 20px;
+    transition: 0.2s;
   }
 
   .title {
@@ -111,14 +72,25 @@
   .metadata {
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     gap: 0.6em;
     margin: 0.33em 0 0.33em 0;
-    align-items: center;
+    align-items: flex-end;
   }
 
   .heading-info {
     border-bottom: 1px solid;
     margin-bottom: 0.4em;
     padding-bottom: 0.4em;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .metadata {
+      flex-direction: column;
+    }
+
+    .master {
+      padding: 1em;
+    }
   }
 </style>
