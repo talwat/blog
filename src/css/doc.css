@@ -89,7 +89,18 @@ th {
   min-height: 2em;
   min-width: 2em;
   padding: 0.6em;
+}
+
+.doc-content td {
   text-align: center;
+}
+
+.doc-content td[align="left"] {
+  text-align: left;
+}
+
+.doc-content td[align="right"] {
+  text-align: right;
 }
 
 .doc-content tr:nth-child(odd) td {
