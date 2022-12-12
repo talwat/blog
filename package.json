@@ -16,7 +16,7 @@
     "@sveltejs/adapter-static": "next",
     "@sveltejs/kit": "next",
     "@types/glob": "^8.0.0",
-    "@types/marked": "^4.0.7",
+    "@types/marked": "^4.0.8",
     "@typescript-eslint/eslint-plugin": "^5.46.0",
     "@typescript-eslint/parser": "^5.46.0",
     "eslint": "^8.29.0",
