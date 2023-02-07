@@ -13,7 +13,7 @@
     "lint": "eslint src/**/*.svelte src/**/*.ts src/**/**/*.ts"
   },
   "devDependencies": {
-    "@sveltejs/adapter-static": "^1.0.6",
+    "@sveltejs/adapter-static": "^2.0.0",
     "@sveltejs/kit": "^1.1.1",
     "@types/glob": "^8.0.1",
     "@types/marked": "^4.0.8",
