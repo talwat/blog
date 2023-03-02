@@ -16,7 +16,7 @@ export interface Doc {
 }
 
 export function getAttributes(raw: string): DocAttributes {
-  let attributes = fm(raw).attributes as DocAttributes;
+  const attributes = fm(raw).attributes as DocAttributes;
 
   if (!attributes.longDesc) {
     attributes.longDesc = attributes.desc;
