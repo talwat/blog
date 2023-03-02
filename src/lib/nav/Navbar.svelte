@@ -37,7 +37,7 @@
 <nav class="top-bar">
   <div class="nav-items">
     <div class="left">
-      <a href={base}>
+      <a href="{base}/">
         <img width="25" height="40" src="{base}/img/pfp.png" alt="Home" />
       </a>
     </div>
