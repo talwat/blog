@@ -1,11 +1,12 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import type { DocAttributes } from "$src/ts/docs";
   import Tags from "../tags/Tags.svelte";
 
   export let post: DocAttributes;
 </script>
 
-<a href="/blog/posts/{post.id}" class="post post-link">
+<a href="{base}/posts/{post.id}" class="post post-link">
   <div class="date">
     <svg
       class="calender-logo"
