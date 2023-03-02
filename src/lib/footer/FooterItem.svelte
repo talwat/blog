@@ -1,7 +1,6 @@
 <script lang="ts">
   import { base } from "$app/paths";
 
-
   export let text: string;
   export let href: string;
 

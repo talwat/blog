@@ -9,12 +9,11 @@
    * Sorted posts
    */
   const posts = data.posts.sort((a, b) => {
+    const ad = new Date(a.date);
+    const bd = new Date(b.date);
 
-    const ad = new Date(a.date)
-    const bd = new Date(b.date)
-
-    if (ad == bd) return 0
-    else return ad < bd ? 1 : -1
+    if (ad == bd) return 0;
+    else return ad < bd ? 1 : -1;
   });
 </script>
 
