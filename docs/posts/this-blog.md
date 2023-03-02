@@ -35,7 +35,7 @@ A list of additional libraries I am using are:
 
 ## How it works
 
-Essentially, this blog has a REST API which allows each web page to get data about each post through a `GET` request. Its content, the description, etc... And then uses that data to display the post. The [about](/blog/about) page is handled very similarly.
+Essentially, this blog has a REST API which allows each web page to get data about each post through a `GET` request. Its content, the description, etc... And then uses that data to display the post. The [about](https://github.com/talwat/blog/blog/about) page is handled very similarly.
 
 This method is the cleanest I have found so far, so I will continue using it.
 
