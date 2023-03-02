@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import type { DocAttributes } from "$src/ts/docs";
   import { posts } from "$ts/posts";
 
@@ -22,7 +23,7 @@
 <div class="search-menu">
   <div class="posts">
     {#each filteredPosts as post}
-      <a class="post" href="/blog/posts/{post.id}">
+      <a class="post" href="{base}/posts/{post.id}">
         {post.title}
       </a>
     {/each}

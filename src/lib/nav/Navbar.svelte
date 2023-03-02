@@ -8,6 +8,8 @@
 </script>
 
 <script lang="ts">
+  import { base } from "$app/paths";
+
   import { setPostsList } from "$ts/posts";
   import { onMount } from "svelte";
 
@@ -22,7 +24,7 @@
   let search: string;
 
   const items: NavItems = [
-    { href: "/blog/about", text: "About" },
+    { href: `${base}/about`, text: "About" },
     "bullet",
     { href: "https://github.com/talwat", text: "Github" },
   ];
@@ -35,8 +37,8 @@
 <nav class="top-bar">
   <div class="nav-items">
     <div class="left">
-      <a href="/blog">
-        <img width="25" height="40" src="/blog/img/pfp.png" alt="Home" />
+      <a href="{base}">
+        <img width="25" height="40" src="{base}/img/pfp.png" alt="Home" />
       </a>
     </div>
 

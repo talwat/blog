@@ -1,5 +1,6 @@
 <script lang="ts">
   import Posts from "$lib/post-list/posts/Posts.svelte";
+  import { websiteURL } from "$src/ts/metadata";
   import type { PageData } from "./$types";
 
   export let data: PageData;
@@ -30,7 +31,7 @@
   />
 
   <meta name="og:title" content="Talwat's Technology & Coding Blog" />
-  <meta name="og:url" content="https://talwat.github.io/blog" />
+  <meta name="og:url" content="{websiteURL}" />
   <meta
     name="og:description"
     content="This blog is for technology, programming, and more. It talks about many things such as different build tools and web frameworks. Made by Tal."

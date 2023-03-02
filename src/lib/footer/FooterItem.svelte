@@ -1,4 +1,7 @@
 <script lang="ts">
+  import { base } from "$app/paths";
+
+
   export let text: string;
   export let href: string;
 
@@ -10,7 +13,7 @@
   <a {href}>
     <img
       class="{lowerCase}-logo"
-      src="/blog/svg/{lowerCase}.svg"
+      src="{base}/svg/{lowerCase}.svg"
       alt="{normalCase} logo"
     />
   </a>

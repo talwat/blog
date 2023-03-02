@@ -48,7 +48,7 @@
     border-radius: 8em;
     width: 8em;
     background: no-repeat 0.25rem 50% / 1.75em 1.75em
-      url(/blog/svg/magnifying-glass.svg);
+      url(/svg/magnifying-glass.svg);
   }
 
   .search:focus {

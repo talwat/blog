@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { base } from "$app/paths";
   import type { Page } from "@sveltejs/kit";
 
   export let page: Page<Record<string, string>>;
@@ -26,7 +27,7 @@
 
     <div class="line" />
 
-    <a class="return-home" href="/blog">Return home</a>
+    <a class="return-home" href="/{base}">Return home</a>
   </div>
 </main>
 
