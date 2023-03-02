@@ -1,1 +1,1 @@
-export const websiteURL = "https://talwat.github.io/blog";
+export const websiteURL = "https://talwat.vercel.app/blog";

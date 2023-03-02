@@ -22,7 +22,7 @@ This blog won't be super professional, as it is only a learning experience, but 
 
 I used [svelte](https://svelte.dev/) and [sveltekit](https://kit.svelte.dev/) _(which itself is powered by [vite](https://vitejs.dev/))_. These are two amazingly useful frameworks. Svelte is mainly for the UI itself, while Sveltekit manages things like routing and SSR (server side rendering).
 
-For hosting, I am using [github pages](https://pages.github.com/), which allows me to host this blog for free. The [source code](https://github.com/talwat/blog) for this blog is on github, too!
+For hosting, [Vercel](https://vercel.com/), which allows me to host this blog for free. The [source code](https://github.com/talwat/blog) for this blog is on github, too!
 
 I'm also using various technologies like Typescript to make the whole process easier.
 
@@ -35,7 +35,7 @@ A list of additional libraries I am using are:
 
 ## How it works
 
-Essentially, this blog has a REST API which allows each web page to get data about each post through a `GET` request. Its content, the description, etc... And then uses that data to display the post. The [about](https://github.com/talwat/blog/blog/about) page is handled very similarly.
+Essentially, this blog has a REST API which allows each web page to get data about each post through a `GET` request. Its content, the description, etc... And then uses that data to display the post. The [about](https://talwat.vercel.app/about) page is handled very similarly.
 
 This method is the cleanest I have found so far, so I will continue using it.
 
