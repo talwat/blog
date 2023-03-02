@@ -1,6 +1,6 @@
 import type { DocAttributes } from "$ts/docs";
 import { get, writable, type Writable } from "svelte/store";
-import { root } from "./metadata";
+import { base } from "$app/paths";
 
 /**
  * Universal posts store, declared whenever needed with the `setPostsList` function. This is either at the homepage or when the searchbar is first used.
@@ -20,6 +20,6 @@ export async function setPostsList(
 ) {
   if (get(posts).length !== 0) return; // If the posts are already defined, return.
 
-  const resp = await fetch(`${root}/api/docs/posts/list`);
+  const resp = await fetch(`${base}/api/docs/posts/list`);
   posts.set((await resp.json()) as DocAttributes[]);
 }

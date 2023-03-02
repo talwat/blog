@@ -2,7 +2,7 @@ import fm from "front-matter";
 import hljs from "highlight.js";
 import { marked } from "marked";
 import type { Doc, DocAttributes } from "$ts/docs";
-import { root } from "./metadata";
+import { base } from "$app/paths";
 
 /**
  * Renders a raw document into markdown.
@@ -32,7 +32,7 @@ export function render(id: string, raw: string, path: string = id): Doc {
 
       // Then, each heading has an anchor which links to its part.
       // The heading is nested inside the anchor. All of this allows it to be clickable, so you can get a link to a certain heading.
-      const anchor = `<a class="heading-anchor" href="${root}/${path}#${textID}">${headingAnchorText}</a>`;
+      const anchor = `<a class="heading-anchor" href="${base}/${path}#${textID}">${headingAnchorText}</a>`;
 
       return `${sections} ${anchor}`;
     },
