@@ -12,7 +12,7 @@
     const ad = new Date(a.date);
     const bd = new Date(b.date);
 
-    if (ad == bd) return 0;
+    if (ad == bd) return a.title.localeCompare(b.title);
     else return ad < bd ? 1 : -1;
   });
 </script>
