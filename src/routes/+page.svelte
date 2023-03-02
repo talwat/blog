@@ -8,9 +8,14 @@
   /**
    * Sorted posts
    */
-  const posts = data.posts.sort((a, b) =>
-    new Date(a.date) < new Date(b.date) ? 1 : -1
-  );
+  const posts = data.posts.sort((a, b) => {
+
+    const ad = new Date(a.date)
+    const bd = new Date(b.date)
+
+    if (ad == bd) return 0
+    else return ad < bd ? 1 : -1
+  });
 </script>
 
 <svelte:head>
@@ -31,7 +36,7 @@
   />
 
   <meta name="og:title" content="Talwat's Technology & Coding Blog" />
-  <meta name="og:url" content="{websiteURL}" />
+  <meta name="og:url" content={websiteURL} />
   <meta
     name="og:description"
     content="This blog is for technology, programming, and more. It talks about many things such as different build tools and web frameworks. Made by Tal."
