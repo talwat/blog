@@ -17,6 +17,11 @@ const config = {
     paths: {
       base: "/blog",
     },
+    alias: {
+      $src: "src/*",
+      $ts: "src/ts/*",
+      $css: "src/css/*",
+    },
   },
 };
 

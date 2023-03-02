@@ -1,7 +1,8 @@
 <script lang="ts">
-  export let url: string;
   import CopyLink from "./CopyLink.svelte";
   import ShareItem from "./ShareItem.svelte";
+
+  export let url: string;
 </script>
 
 <div class="share">

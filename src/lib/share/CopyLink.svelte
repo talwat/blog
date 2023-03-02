@@ -5,9 +5,9 @@
 
 <button
   class="transparent-btn link-btn"
-  on:click={() => {
+  on:click={async () => {
+    await navigator.clipboard.writeText(url);
     copiedLink = true;
-    navigator.clipboard.writeText(url);
     setTimeout(() => (copiedLink = false), 500);
   }}
   title="Copy Link"

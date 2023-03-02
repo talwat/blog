@@ -38,6 +38,11 @@
     margin: 0;
   }
 
+  .nav-items > li {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+  }
+
   .menu {
     width: auto;
     height: fit-content;

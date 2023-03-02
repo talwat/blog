@@ -4,7 +4,10 @@
 
   export let data: PageData;
 
-  const sortedPosts = data.posts.sort((a, b) =>
+  /**
+   * Sorted posts
+   */
+  const posts = data.posts.sort((a, b) =>
     new Date(a.date) < new Date(b.date) ? 1 : -1
   );
 </script>
@@ -39,7 +42,7 @@
 
   <div class="line" />
 
-  <Posts posts={sortedPosts} />
+  <Posts {posts} />
 </main>
 
 <style>

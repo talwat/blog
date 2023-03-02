@@ -1,6 +1,7 @@
 import { json, error, type RequestHandler } from "@sveltejs/kit";
 
-import { getRawDoc, renderMd } from "$lib/utils";
+import { getRawDoc } from "$ts/get";
+import { render } from "$ts/md";
 
 export const GET: RequestHandler = async ({ params }) => {
   /*
@@ -16,5 +17,5 @@ export const GET: RequestHandler = async ({ params }) => {
   const path: string = `docs/posts/${params.id ? params.id : "undefined"}.md`;
   const raw: string = await getRawDoc(path);
 
-  return json(renderMd(params.id, raw, `posts/${params.id}`));
+  return json(render(params.id, raw, `posts/${params.id}`));
 };

@@ -8,7 +8,7 @@
 </script>
 
 <script lang="ts">
-  import { getPosts } from "$lib/posts";
+  import { setPostsList } from "$ts/posts";
   import { onMount } from "svelte";
 
   import Hamburger from "./hamburger/Hamburger.svelte";
@@ -28,7 +28,7 @@
   ];
 
   onMount(() => {
-    getPosts(fetch);
+    setPostsList(fetch);
   });
 </script>
 

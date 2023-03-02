@@ -1,14 +1,13 @@
 <script lang="ts">
-  import type { Doc } from "src/docs";
-  import "/src/css/doc.css";
-  import "/src/css/code.css";
+  import type { Doc } from "$src/ts/docs";
+  import "$css/doc.css";
+  import "$css/code.css";
   import Share from "./share/Share.svelte";
+  import { websiteURL } from "$src/ts/metadata";
 
   export let doc: Doc;
 
-  const url = `https://talwat.github.io/blog/${
-    doc.attributes.id !== "about" ? "posts/" : ""
-  }${doc.attributes.id}`;
+  const url = `${websiteURL}/${doc.attributes.path}`;
 </script>
 
 <svelte:head>
@@ -16,11 +15,9 @@
   <meta name="twitter:title" content="Talwat's Blog - {doc.attributes.title}" />
   <meta name="og:title" content="Talwat's Blog - {doc.attributes.title}" />
 
-  {#if doc.attributes.longDesc}
-    <meta name="description" content={doc.attributes.longDesc} />
-    <meta name="twitter:description" content={doc.attributes.longDesc} />
-    <meta name="og:description" content={doc.attributes.longDesc} />
-  {/if}
+  <meta name="description" content={doc.attributes.longDesc} />
+  <meta name="twitter:description" content={doc.attributes.longDesc} />
+  <meta name="og:description" content={doc.attributes.longDesc} />
 
   {#if doc.attributes.tags}
     <meta name="keywords" content={doc.attributes.tags.join(", ")} />

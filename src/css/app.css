@@ -1,15 +1,15 @@
 /* @import url("./roboto.css"); */
 
 :root {
-  --bg-0: #2f383e;
-  --bg-1: #374247;
-  --bg-2: #404c51;
-  --bg-3: #4a555b;
-  --bg-4: #525c62;
-  --bg-5: #596763;
+  --bg-0: #2d353b;
+  --bg-1: #343f44;
+  --bg-2: #3d484d;
+  --bg-3: #475258;
+  --bg-4: #4f585e;
+  --bg-5: #56635f;
   --fg: #d3c6aa;
   --fg-secondary: #9da9a0;
-  --code-bg: #2b3339;
+  --code-bg: #232a2e;
   --link: #7fbbb3;
 
   --blue: #7fbbb3;

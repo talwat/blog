@@ -4,11 +4,11 @@
 
 <div class="search-bar">
   <button
-    class={search == "" ? "x-btn" : "x-btn x-btn-active"}
+    class={search == "" ? "close-btn" : "close-btn close-btn-active"}
     on:click={() => (search = "")}
   >
     <svg
-      class={search == "" ? "x" : "x x-active"}
+      class={search == "" ? "close" : "close close-active"}
       width="30"
       height="30"
       viewBox="-5 -5 60 60"
@@ -42,9 +42,9 @@
 
   .search {
     color: var(--fg);
-    border: 2px var(--bg-pop) solid;
+    border: 2px var(--fg-secondary) solid;
     padding: 0.5em;
-    padding-left: calc(0.5em + 24px);
+    padding-left: calc(0.5em + 1.75em);
     border-radius: 8em;
     width: 8em;
     background: no-repeat 0.25rem 50% / 1.75em 1.75em
@@ -56,7 +56,7 @@
     border-color: var(--green);
   }
 
-  .x-btn {
+  .close-btn {
     position: absolute;
     left: calc(50% + 3.6em);
     border: 0;
@@ -66,18 +66,18 @@
     display: block;
   }
 
-  .x-btn-active {
+  .close-btn-active {
     cursor: pointer;
   }
 
-  .x {
-    stroke: var(--bg-pop);
+  .close {
+    stroke: var(--fg-secondary);
     width: 14px;
     display: block;
     overflow: visible;
   }
 
-  .x-active {
+  .close-active {
     stroke: var(--fg);
   }
 </style>

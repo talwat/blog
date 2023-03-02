@@ -1,5 +1,5 @@
 <script lang="ts">
-  import type { DocAttributes } from "src/docs";
+  import type { DocAttributes } from "$src/ts/docs";
   import Post from "./Post.svelte";
 
   export let posts: DocAttributes[];

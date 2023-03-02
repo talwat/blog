@@ -1,8 +1,8 @@
 <script lang="ts">
   import Doc from "$lib/Doc.svelte";
-  import type { PageData } from "./$types";
+  import type { Doc as DocType } from "$src/ts/docs";
 
-  export let data: PageData;
+  export let data: DocType;
 </script>
 
 <main>

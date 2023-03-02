@@ -1,12 +1,13 @@
 import type { RequestHandler } from "@sveltejs/kit";
 import { create } from "xmlbuilder2";
-import type { DocAttributes } from "src/docs";
-import { getListOfPosts } from "$lib/utils";
+import type { DocAttributes } from "$ts/docs";
+import { getPostList } from "$ts/get";
+import { websiteURL } from "$src/ts/metadata";
 
 export const prerender = true;
 
 export const GET: RequestHandler = async () => {
-  const posts: DocAttributes[] = await getListOfPosts();
+  const posts: DocAttributes[] = await getPostList();
 
   const xml = create({ version: "1.0", encoding: "UTF-8" }).ele("urlset", {
     xmlns: "http://www.sitemaps.org/schemas/sitemap/0.9",
@@ -16,7 +17,7 @@ export const GET: RequestHandler = async () => {
     xml
       .ele("url")
       .ele("loc")
-      .txt(`https://talwat.github.io/blog/${loc}`)
+      .txt(`${websiteURL}/${loc}`)
       .up()
       .ele("priority")
       .txt(priority.toString());
@@ -26,7 +27,7 @@ export const GET: RequestHandler = async () => {
     xml
       .ele("url")
       .ele("loc")
-      .txt(`https://talwat.github.io/blog/${loc}`)
+      .txt(`${websiteURL}/${loc}`)
       .up()
       .ele("priority")
       .txt(priority.toString())
