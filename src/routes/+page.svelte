@@ -12,8 +12,8 @@
     const ad = new Date(a.date);
     const bd = new Date(b.date);
 
-    if (ad === bd) return a.title < b.title ? 1 : -1;
-    else return ad < bd ? 1 : -1;
+    if (ad.getTime() == bd.getTime()) return a.title.localeCompare(b.title)
+    return ad < bd ? 1 : -1;
   });
 </script>
 
