@@ -10,6 +10,9 @@ const config = {
   extensions: [".svelte"],
 
   kit: {
+    paths: {
+      base: "",
+    },
     adapter: adapter({
       pages: "dist",
       assets: "dist",
@@ -20,6 +23,7 @@ const config = {
       $css: "src/css/*",
     },
   },
+  prerender: { default: true },
 };
 
 export default config;
