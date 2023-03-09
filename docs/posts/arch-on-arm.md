@@ -40,7 +40,7 @@ Also this guide doesn't cover duel-boots.
 And finally, you should have an ARM v8 (aka. `aarch64`, aka. `arm64`) processor.
 This guide will not cover older/32 bit ARM CPU's.
 
-## Preperations
+## Preparations
 
 You will need to use another distro to actually do the installation.
 I used Fedora, but any distro with wget & bsdtar should in theory work.
