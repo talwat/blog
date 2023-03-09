@@ -41,7 +41,7 @@ I made the mistake of using an amd64 stage tarball, and not suprisingly, it didn
 
 ## The system logger
 
-The gentoo install guide reccomends [sysklogd](https://packages.gentoo.org/packages/app-admin/sysklogd),
+The gentoo install guide recommends [sysklogd](https://packages.gentoo.org/packages/app-admin/sysklogd),
 but you might get an error when you try and compile it, because it isn't stable on ARM yet.
 
 You can use the two other options listed, [syslog-ng](https://packages.gentoo.org/packages/app-admin/syslog-ng), or
@@ -77,5 +77,5 @@ ARM devices vary wildly, and you are bound to run into issues with a single one-
 
 But, this guide does work on UTM when I tested it, so take that as you will.
 
-Gentoo is an awesome distro, and is very unique in it's customizability, and I would reccommend to every
+Gentoo is an awesome distro, and is very unique in it's customizability, and I would recommend to every
 computer nerd to give it a go.
