@@ -239,7 +239,7 @@ then, update the system:
 pacman -Syu
 ```
 
-Now, let's install `efibootmgr`
+Now, let's install `efibootmgr`:
 
 ```sh
 pacman -S efibootmgr
@@ -281,7 +281,7 @@ bobs-pc
 
 ### Hosts
 
-And set the hosts file to:
+And set the `/etc/hosts` file to:
 
 ```txt
 127.0.0.1    localhost
@@ -381,7 +381,7 @@ and you can update your system like this:
 doas pacman -Syu
 ```
 
-Also, you edit your `.bashrc` and append this:
+Also, you can edit your `.bashrc` and append this:
 
 ```sh
 alias sudo='doas'
