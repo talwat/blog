@@ -95,14 +95,14 @@ Finally, to save our changes, press `w` and then enter.
 
 ## Formatting & Mounting our partitions
 
-First, format the root partition as `ext4` like so:
+First, format the root partition as `ext4`.
 The root partition would be the second partition on the drive, for example: `/dev/sda2`.
 
 ```sh
 mkfs.ext4 /dev/root_partition
 ```
 
-And to format the EFI System partition run:m
+And then format the EFI System partition.
 The EFI system partition would be the first partition on the drive, for example: `/dev/sda1`.
 
 ```sh
@@ -161,7 +161,8 @@ Making it ourselves is the easier option, so we will do that.
 
 First, get your partition UUID's by running `blkid`. These will also be important later on.
 
-Then, edit the fstab like so:
+Then, edit the fstab.
+
 Replace the UUID's accordingly, with the first UUID being the one of the first partition,
 and the second UUID being the UUID of the second partition.
 
