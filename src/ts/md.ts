@@ -20,8 +20,10 @@ export function render(id: string, raw: string, path: string = id): Doc {
         .toLowerCase()
         .replaceAll(" ", "-")
         .replaceAll("`", "")
+        .replaceAll("'", "")
         .replaceAll("*", "")
         .replaceAll("_", "")
+        .replaceAll("&", "")
         .replaceAll("!", "")
         .replaceAll("?", "");
 
