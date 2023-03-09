@@ -25,9 +25,10 @@
 
 .doc-content pre {
   background-color: var(--code-bg);
-  max-width: 50em;
+  max-width: 100%;
+  overflow: auto;
   width: auto;
-  padding: 0.5em;
+  padding: 0.8em;
   border-radius: 0.5em;
 }
 
@@ -37,8 +38,6 @@
 
 .doc-content code {
   font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-  white-space: pre-wrap;
-  word-wrap: break-word;
   font-size: 0.8em;
 }
 
