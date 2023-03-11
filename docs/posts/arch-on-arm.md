@@ -347,53 +347,15 @@ Additionally, Arch Linux ARM comes with a normal user for ssh (`alarm`), but we 
 userdel -r alarm
 ```
 
-### Using doas
-
-`sudo` does not support arm64, so we can use `doas` instead.
-
-First, install it:
-
-```sh
-pacman -S doas
-```
-
-then configure it by editing `/etc/doas.conf`:
-
-```txt
-permit nopass :wheel
-```
-
-You can also setup an alias for `doas` if you are use to sudo.
-
 ## And you're done
 
 You can now reboot the system, and login as the user you created.
 
-Install packages like so:
-
-```sh
-doas pacman -S <package>
-```
-
-and you can update your system like this:
-
-```sh
-doas pacman -Syu
-```
-
-Also, you can edit your `.bashrc` and append this:
-
-```sh
-alias sudo='doas'
-```
-
-to make it so that whenever you type in sudo it will run doas instead.
-
-You will have to either log out or run `exec bash` for the changes to go into effect.
-
 ## What next?
 
 You can try installing a graphical enviornment (which may be very challenging), or installing other tools.
+
+You may also want to install sudo to install packages and so on.
 
 ## Credits
 
