@@ -27,7 +27,7 @@
     "typescript": "^5.0.4",
     "vite": "^4.2.1",
     "svelte-preprocess": "^5.0.3",
-    "@types/glob": "^8.0.0",
+    "@types/glob": "^8.1.0",
     "@types/marked": "^4.0.8",
     "front-matter": "^4.0.2",
     "highlight.js": "^11.7.0",

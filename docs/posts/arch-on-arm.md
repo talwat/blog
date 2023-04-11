@@ -140,7 +140,7 @@ wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
 
 beware that this might take a while.
 
-A rootfs is essentially a linux distrobution packaged into a tarball. The entire root filesystem is packaged and distributed.
+A rootfs is essentially a linux distribution packaged into a tarball. The entire root filesystem is packaged and distributed.
 This makes it excellent for use in containers or `chroot`'s, but it can be more difficult to use if you are using it
 for bare metal.
 
