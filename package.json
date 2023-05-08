@@ -31,7 +31,7 @@
     "@types/marked": "^4.0.8",
     "front-matter": "^4.0.2",
     "highlight.js": "^11.8.0",
-    "marked": "^4.3.0",
+    "marked": "^5.0.1",
     "xmlbuilder2": "^3.1.0"
   },
   "type": "module"
