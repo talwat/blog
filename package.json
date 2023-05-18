@@ -12,7 +12,7 @@
     "lint": "prettier --plugin-search-dir . --check . && eslint ."
   },
   "devDependencies": {
-    "@sveltejs/adapter-auto": "^2.0.1",
+    "@sveltejs/adapter-auto": "^2.1.0",
     "@sveltejs/kit": "^1.18.0",
     "@typescript-eslint/eslint-plugin": "^5.59.6",
     "@typescript-eslint/parser": "^5.59.6",
