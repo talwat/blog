@@ -125,6 +125,8 @@ mount /dev/root_partition /mnt/arch/boot --mkdir
 
 If you've done a typical Arch/Gentoo install, you will notice that so far this has been very typical.
 This is the part where things start to differ from the typical install guide.
+This is because this guide will use efistub to boot the kernel instead of a conventional bootloader.
+efistub is basically just allows us to boot directly into the kernel without a bootloader.
 
 First, cd into the drive like so:
 
@@ -216,7 +218,9 @@ With any luck, you should be booted into your brand new system! But you're not d
 
 As far as I know, Archlinux ARM only comes with tools for ethernet.
 
-If you use ethernet it should work out of the box, if you use wifi, good luck.
+If you use ethernet it should work out of the box, if you use wifi, you would have to figure out how to chroot into the new install.
+
+Instructions for chrooting into an Arch install without `arch-chroot` can be found [here](https://wiki.archlinux.org/title/chroot#Using_chroot). From there you just have to install a wireless manager and whatever else you might need.
 
 You can check your internet by running:
 
