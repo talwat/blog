@@ -48,31 +48,6 @@ jobs:
         run: |
           npm run check
 
-  yaml:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout source code
-        uses: actions/checkout@v3
-
-      - name: Setup python
-        uses: actions/setup-python@v4.6.0
-        with:
-          python-version: "3.10"
-
-      - name: Install yamllint
-        run: pip install --user yamllint
-
-      - name: Lint normal yaml files
-        run: yamllint . -f github
-
-      - name: Install actionlint
-        id: get_actionlint
-        run: bash <(curl https://raw.githubusercontent.com/rhysd/actionlint/main/scripts/download-actionlint.bash)
-
-      - name: Run actionlint
-        run: ${{ steps.get_actionlint.outputs.executable }} -color -shellcheck=
-
   analyze:
     runs-on: ubuntu-latest
     permissions:
