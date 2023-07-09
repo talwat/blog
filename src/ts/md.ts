@@ -2,7 +2,6 @@ import fm from "front-matter";
 import hljs from "highlight.js";
 import { marked } from "marked";
 import { markedHighlight } from "marked-highlight";
-import { mangle } from "marked-mangle";
 import type { Doc, DocAttributes } from "$ts/docs";
 import { base } from "$app/paths";
 
@@ -52,11 +51,11 @@ export function render(id: string, raw: string, path: string = id): Doc {
     })
   );
 
-  marked.use(mangle());
   marked.use({ renderer });
 
   const parsedHTML = marked.parse(frontMatter.body, {
     headerIds: false,
+    mangle: false,
   });
 
   const attributes = frontMatter.attributes as DocAttributes;
