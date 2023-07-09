@@ -41,15 +41,11 @@ export function render(id: string, raw: string, path: string = id): Doc {
     },
   };
 
-  marked.use(
-    markedHighlight({
-      langPrefix: "hljs language-",
-      highlight(code, lang) {
-        const language = hljs.getLanguage(lang) ? lang : "plaintext";
-        return hljs.highlight(code, { language }).value;
-      },
-    })
-  );
+  marked.setOptions({
+    highlight: function (code, lang) {
+      return hljs.highlight(code, { language: lang }).value;
+    },
+  });
 
   marked.use({ renderer });
 
