@@ -22,7 +22,7 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-svelte": "^2.30.0",
     "front-matter": "^4.0.2",
-    "highlight.js": "^11.8.0",
+    "highlight.js": "^11.7.0",
     "marked": "^5.1.1",
     "marked-highlight": "^2.0.1",
     "prettier": "^2.8.0",
