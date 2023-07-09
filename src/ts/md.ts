@@ -1,6 +1,8 @@
 import fm from "front-matter";
 import hljs from "highlight.js";
 import { marked } from "marked";
+import { markedHighlight } from "marked-highlight";
+import { mangle } from "marked-mangle";
 import type { Doc, DocAttributes } from "$ts/docs";
 import { base } from "$app/paths";
 
@@ -40,12 +42,17 @@ export function render(id: string, raw: string, path: string = id): Doc {
     },
   };
 
-  marked.setOptions({
-    highlight: function (code, lang) {
-      return hljs.highlight(code, { language: lang }).value;
-    },
-  });
+  marked.use(
+    markedHighlight({
+      langPrefix: "hljs language-",
+      highlight(code, lang) {
+        const language = hljs.getLanguage(lang) ? lang : "plaintext";
+        return hljs.highlight(code, { language }).value;
+      },
+    })
+  );
 
+  marked.use(mangle());
   marked.use({ renderer });
 
   const parsedHTML = marked.parse(frontMatter.body, {

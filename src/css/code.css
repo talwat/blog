@@ -1,14 +1,9 @@
 pre code.hljs {
   display: block;
   overflow-x: auto;
-  padding: 1em;
-}
-code.hljs {
-  padding: 3px 5px;
 }
 .hljs {
   color: var(--fg);
-  background: var(--bg-secondary);
 }
 .hljs-comment,
 .hljs-quote {
