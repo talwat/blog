@@ -179,9 +179,6 @@ EOF
 
 ## Making the startup script
 
-From here on out this guide will be using efistub for booting functionality.
-If you want to use grub, it's possible, but you will have to figure it out on your own.
-
 Because we are unable to set up **proper** boot functionality without being actually booted into the OS,
 we have to use a startup.nsh script.
 
@@ -235,7 +232,11 @@ ping google.com
 
 ## Getting a proper boot setup
 
-Now that we can boot, let's make this an actual proper system. First, let's setup the keys:
+Now that we can boot, let's make this an actual proper system.
+
+Log in as `root` with the password: `root`.
+
+Then, let's setup the keys:
 
 ```sh
 pacman-key --init
@@ -254,6 +255,11 @@ Now, let's install `efibootmgr`:
 pacman -S efibootmgr
 ```
 
+### Using efistub
+
+If you would like to use efistub for all future boots, read on.
+However, you can also use grub, which is a bit easier and more familiar, and if you want to read [Using GRUB](#using-grub).
+
 And create the boot entry:
 Replace `<xxx>` with your **disk**, not a partition. So for example, `/dev/sda`.
 and the UUID with the UUID of the root partition.
@@ -269,15 +275,45 @@ and then reboot:
 reboot
 ```
 
-## Finishing up
+### Using GRUB
 
-Log in as `root` with the password: `root`.
+If you would like to use grub, first, install the grub package:
+
+```sh
+pacman -S grub
+```
+
+then install it to your ESP:
+
+```sh
+grub-install --target=arm64-efi --efi-directory=/boot --bootloader-id=Arch
+```
+
+and generate the config:
+
+```sh
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+and then finally reboot:
+
+```sh
+reboot
+```
+
+## Finishing up
 
 First, install a text editor like `vim` or `nano`:
 
 ```sh
 pacman -S nano # for nano
 pacman -S vim # for vim
+```
+
+you can also delete the tarball we downloaded to save disk space like so:
+
+```sh
+rm /ArchLinuxARM-aarch64-latest.tar.gz
 ```
 
 ### Hostname
