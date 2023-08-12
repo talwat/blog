@@ -43,13 +43,7 @@ This guide will not cover older/32 bit ARM CPU's.
 ## Preparations
 
 You will need to use another distro to actually do the installation.
-I used Fedora, but any distro with wget & bsdtar should in theory work.
-
-If you are using fedora, manually install bsdtar like so:
-
-```sh
-sudo dnf install bsdtar
-```
+I used Fedora, but any distro should in theory work.
 
 and, for the rest of this guide (unless explicitly stated), it is assumed you will be root.
 So, switch over to root:
@@ -140,7 +134,9 @@ then, let's download the rootfs like so:
 wget http://os.archlinuxarm.org/os/ArchLinuxARM-aarch64-latest.tar.gz
 ```
 
-beware that this might take a while.
+You can also use curl, or a browser, it doesn't matter.
+
+Beware that this might take a while.
 
 A rootfs is essentially a linux distribution packaged into a tarball. The entire root filesystem is packaged and distributed.
 This makes it excellent for use in containers or `chroot`'s, but it can be more difficult to use if you are using it
@@ -149,7 +145,13 @@ for bare metal.
 Now that it's done, extract it like so:
 
 ```sh
-bsdtar -xpf ArchLinuxARM-aarch64-latest.tar.gz -C /mnt/arch
+bsdtar -xpvf ArchLinuxARM-aarch64-latest.tar.gz -C /mnt/arch
+```
+
+or if you don't have bsdtar:
+
+```sh
+tar xpvf ArchLinuxARM-aarch64-latest.tar.gz --xattrs-include='*.*' --numeric-owner -C /mnt/arch
 ```
 
 which will unpack it into our partitions.
@@ -176,6 +178,9 @@ EOF
 ```
 
 ## Making the startup script
+
+From here on out this guide will be using efistub for booting functionality.
+If you want to use grub, it's possible, but you will have to figure it out on your own.
 
 Because we are unable to set up **proper** boot functionality without being actually booted into the OS,
 we have to use a startup.nsh script.
@@ -318,7 +323,7 @@ To generate them, run:
 locale-gen
 ```
 
-You should also create `/etc/locale.conf` file and set the LANG variable properly:
+You should also create `/etc/locale.conf` and set the LANG variable properly:
 
 ```txt
 LANG=en_US.UTF-8
