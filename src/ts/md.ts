@@ -1,6 +1,6 @@
 import fm from "front-matter";
 import hljs from "highlight.js";
-import { marked } from "marked";
+import { Marked } from "marked";
 import { markedHighlight } from "marked-highlight";
 import type { Doc, DocAttributes } from "$ts/docs";
 import { base } from "$app/paths";
@@ -41,18 +41,19 @@ export function render(id: string, raw: string, path: string = id): Doc {
     },
   };
 
-  marked.setOptions({
-    highlight: function (code, lang) {
-      return hljs.highlight(code, { language: lang }).value;
-    },
-  });
+  const marked = new Marked(
+    markedHighlight({
+      langPrefix: "hljs language-",
+      highlight(code, lang) {
+        const language = hljs.getLanguage(lang) ? lang : "plaintext";
+        return hljs.highlight(code, { language }).value;
+      },
+    })
+  );
 
   marked.use({ renderer });
 
-  const parsedHTML = marked.parse(frontMatter.body, {
-    headerIds: false,
-    mangle: false,
-  });
+  const parsedHTML = marked.parse(frontMatter.body);
 
   const attributes = frontMatter.attributes as DocAttributes;
 
@@ -60,7 +61,7 @@ export function render(id: string, raw: string, path: string = id): Doc {
   attributes.path = path;
 
   return {
-    content: `<section>${parsedHTML.trim()}</section>`,
+    content: `<section>${(parsedHTML as string).trim()}</section>`,
     attributes: attributes,
   };
 }

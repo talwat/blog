@@ -37,7 +37,12 @@
 }
 
 .doc-content code {
-  font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+  font-family:
+    Consolas,
+    Monaco,
+    Andale Mono,
+    Ubuntu Mono,
+    monospace;
   font-size: 0.8em;
 }
 
